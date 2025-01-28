@@ -1,0 +1,136 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Online Services",
+    "activities": "Cultural Activities",
+    "announcements": "Announcements",
+    "contact": "Contact Us",
+    "logo": {
+      "title": "الملحقية الثقافية بسفارة الجمهورية اليمنية - موسكو",
+      "subtitle": "Yemeni Cultural Attache - Moscow"
+    }
+  },
+  "hero": {
+    "title": "Official website of the Cultural Attaché of Yemen in Moscow",
+    "description": "Provides comprehensive and accurate information for all Yemeni students in Russia.",
+    "read_more": "Read More"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "address": "Address",
+    "address_value": "Yemeni Embassy in Moscow",
+    "email": "Email",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "whatsapp_message": "Send Message"
+  },
+  "footer": {
+    "title_part_1": "Join",
+    "title_part_2": "students",
+    "title_part_3": "to get the latest news",
+    "description": "Subscribe to our newsletter to receive the latest news and important announcements for students.",
+    "email_placeholder": "studentname@gmail.com",
+    "subscribe_button": "Subscribe",
+    "rights_reserved": "All rights reserved."
+  },
+  "boffer": {
+    "title": "Cultural Attaché",
+    "description": "Cultural Affairs Management for Students Studying Abroad"
+  },
+  "about": {
+    "title": "About the Cultural Attaché",
+    "description": "The Cultural Attaché aims to support students and researchers by providing comprehensive educational and academic services, and enhancing collaboration between educational and cultural institutions to create an environment that encourages excellence and creativity.",
+    "contact": "Contact Us",
+    "alt": "About the Cultural Attaché"
+  },
+  "sections": {
+    "title": "Sections of the Cultural Mission",
+    "cultural_advisor": {
+      "title": "Cultural Advisor",
+      "description": "Manages cultural affairs and oversees the achievement of the mission's objectives."
+    },
+    "assistant_financial_advisor": {
+      "title": "Assistant Financial Advisor",
+      "description": "Responsible for financial oversight and providing support in managing financial resources."
+    },
+    "academic_affairs": {
+      "title": "Academic Affairs",
+      "description": "Responsible for monitoring students' academic progress and communicating with educational institutions."
+    },
+    "public_relations": {
+      "title": "Public Relations and Media",
+      "description": "Handles cultural activities, coordination with universities and related organizations, and provides guidance and awareness services for students."
+    },
+    "it": {
+      "title": "Information Technology",
+      "description": "Handles technical infrastructure, internal networks, the mission's website, and various online services."
+    },
+    "secretary": {
+      "title": "Secretariat",
+      "description": "Handles mail, archiving, correspondence with universities, and other traditional secretarial tasks."
+    }
+  },
+  "speech": {
+    "title": "Speech of the Cultural Advisor",
+    "content": {
+      "intro": "Welcome to the website of the Cultural Mission, where we strive to provide the best services for students and researchers, and enhance cultural cooperation between countries. Our goal is to support academic and creative excellence and provide a stimulating educational environment that contributes to building a better future for all.",
+      "details": "We also aim to build bridges of cultural communication with various entities to achieve common goals and enhance cultural dialogue. The mission is committed to providing all forms of support to students through academic advice and facilitating communication with universities and institutions."
+    },
+    "read_more": "Read More",
+    "read_less": "Read Less"
+  },
+  "team": {
+    "title": "Team Members",
+    "advisor": {
+      "name": "Dr. Khalid Sha'fal",
+      "title": "Cultural Advisor",
+      "bio": "Biography of Dr. Khalid Sha'lal."
+    },
+    "assistant": {
+      "name": "Mr. Fouad Al-Taifi",
+      "title": "Assistant Cultural Advisor",
+      "bio": "Biography of Mr. Fouad Al-Taifi."
+    },
+    "secretary": {
+      "name": "Flora",
+      "title": "Secretary",
+      "bio": "Biography of Flora."
+    },
+    "it": {
+      "name": "Tech Person",
+      "title": "Information Technology",
+      "bio": "Biography of Tech Person."
+    },
+    "academic": {
+      "name": "Mr. Mansour Al-Salawi",
+      "title": "Academic Affairs",
+      "bio": "Biography of Mr. Mansour Al-Salawi."
+    },
+    "publicRelations": {
+      "name": "Dr. Ahmed Al-Maglis",
+      "title": "Public Relations and Media",
+      "bio": "Biography of Dr. Ahmed Al-Maglis."
+    }
+  },
+  "culturalMagazine": {
+    "title": "Cultural Magazine",
+    "description": "Read the latest edition of the Cultural Magazine.",
+    "iframeTitle": "Cultural Magazine"
+  },
+  "culturalActivities": {
+    "title": "Cultural Activities and Events"
+  },
+  "culturalWeek": {
+    "title": "Cultural Week",
+    "description": "Details about the upcoming events of the cultural week."
+  },
+  "officialEvents": {
+    "title": "Official Events",
+    "description": "A list of official cultural events for students."
+  },
+  "imageGallery": {
+    "title": "Images",
+    "description": "Gallery of the Cultural Attaché's activities."
+  }
+}
