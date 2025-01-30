@@ -30,7 +30,7 @@ export const About: React.FC = () => {
           </div>
           <img
             className="lg:mx-0 mx-auto h-full rounded-3xl object-cover"
-            src="https://pagedone.io/asset/uploads/1717751272.png"
+            src="./mulhaqia.jpg"
             alt={t('about.alt')}
           />
         </div>
