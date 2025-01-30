@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation();
-  const [selectedTitle, setSelectedTitle] = useState(t("navbar.home"));
+  const [selectedTitle, setSelectedTitle] = useState(t("navbar.home")); 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
   const [currentFlag, setCurrentFlag] = useState("");
