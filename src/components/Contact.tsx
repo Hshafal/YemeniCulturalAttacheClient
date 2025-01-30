@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
         {t("contact.title")}
       </h2> */}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 border p-4">
+      <div id="contacts" className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 border p-4">
         {/* Left Section: Map */}
         <div className="rounded-lg overflow-hidden shadow-lg">
           <iframe

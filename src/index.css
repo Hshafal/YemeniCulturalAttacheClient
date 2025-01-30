@@ -8,5 +8,6 @@
 
 body {
   font-family: 'Times New Roman', Times, serif;
+  scroll-behavior: smooth;
 }
 

@@ -12,21 +12,21 @@ export const About: React.FC = () => {
               <h2 className="text-gray-900 text-4xl font-bold leading-normal text-start">
                 {t('about.title')}
               </h2>
-              <p className="text-gray-500 text-base font-normal leading-relaxed text-start">
+              <p className="text-gray-500 text-xl font-semibold leading-relaxed text-start">
                 {t('about.description')}
               </p>
-              <p className="text-gray-500 text-base font-normal leading-relaxed text-start">
+              <p className="text-gray-500 text-xl font-semibold leading-relaxed text-start">
                 {t('about.description')}
               </p>
-              <p className="text-gray-500 text-base font-normal leading-relaxed text-start">
+              <p className="text-gray-500 text-xl font-semibold leading-relaxed text-start">
                 {t('about.description')}
               </p>
             </div>
-            <button className="sm:w-fit hover:text-white w-full px-3.5 py-2 border hover:bg-red-500 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
+            <a href='#contacts' className="sm:w-fit hover:text-white w-full px-3.5 py-2 border hover:bg-red-500 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
               <span className="px-1.5 hover:text-white text-sm font-medium leading-6 text-black">
                 {t('about.contact')}
               </span>
-            </button>
+            </a>
           </div>
           <img
             className="lg:mx-0 mx-auto h-full rounded-3xl object-cover"
