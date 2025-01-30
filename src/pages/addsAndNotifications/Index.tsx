@@ -321,20 +321,27 @@ const AnnouncementsAndNotifications: React.FC = () => {
 		</div>
 	);
 
-	return (
-		<div className="p-4 max-w-7xl mx-auto">
-			<h1 className="text-2xl font-bold text-gray-900 mb-6">الإعلانات والإشعارات</h1>
-			<div className="border border-gray-300 p-4 rounded-lg shadow-sm space-y-4">
+	function StudyingInRussia() {
+		return (
+			<>
 				<ToggleList title="اللوائح والقوانين المتعلقة بالطلاب الدارسين في روسيا الاتحادية" content={regulationsContent} />
 				<ToggleList
 					title="تكاليف الحياة في روسيا لعام 2024: دليلك الشامل للمعيشة الطلابية"
 					content={costOfLivingContent}
 				/>
+			</>
+		);
+	}
+
+	return (
+		<div className="p-4 max-w-7xl mx-auto">
+			<h1 className="text-2xl font-bold text-gray-900 mb-6">الإعلانات والإشعارات</h1>
+			<div className="border border-gray-300 p-4 rounded-lg shadow-sm space-y-4">
 				<ToggleList title="تعليمات الملحقية" content={<h1>قريبا</h1>} />
 				<ToggleList title="تعليمات الوزارة" content={<h1>قريبا</h1>} />
 				<ToggleList title="التسجيل في المنح الروسية" content={<h1>قريبا</h1>} />
 				<ToggleList title="احصائيات طلابية" content={<h1>قريبا</h1>} />
-				<ToggleList title="الدراسة في روسيا" content={<h1>قريبا</h1>} />
+				<ToggleList title="الدراسة في روسيا" content={<StudyingInRussia />} />
 				<ToggleList title="دليل الجامعات الروسية المعتمدة" content={<h1>قريبا</h1>} />
 			</div>
 		</div>
