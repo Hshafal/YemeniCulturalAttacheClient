@@ -3,6 +3,7 @@ import React from "react";
 import useNews from "../../api/useNews";
 import { Link } from "react-router-dom";
 import { shortenString } from "../../utils";
+import { IMAGES_URL } from "../../api/myAxios";
 
 const NewsPage: React.FC = () => {
 	return (
@@ -41,7 +42,11 @@ function News() {
 					>
 						<Link to={`/news/${news._id}`} className="group">
 							{/* News Image */}
-							<img src="/news/news3.jpg" alt={news.title} className="rounded-t-lg w-full h-48 object-cover" />
+							<img
+								src={news.thumbnail ? `${IMAGES_URL}/${news.thumbnail}` : "/news/news3.jpg"}
+								alt={news.title}
+								className="rounded-t-lg w-full h-48 object-cover"
+							/>
 							<div className="p-4">
 								{/* News Title */}
 								<h3 className="text-xl font-semibold text-gray-900 group-hover:text-red-600 transition-colors">

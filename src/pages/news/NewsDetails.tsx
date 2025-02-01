@@ -3,7 +3,7 @@ import useNews from "../../api/useNews";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import myAxios from "../../api/myAxios";
+import myAxios, { IMAGES_URL } from "../../api/myAxios";
 
 const NewsDetails: React.FC = () => {
 	const { id } = useParams();
@@ -27,7 +27,11 @@ const NewsDetails: React.FC = () => {
 		<div dir="rtl" className="container mx-auto px-6 py-10 lg:flex lg:gap-12">
 			{/* Main Article Section */}
 			<main className="lg:flex-1 bg-white p-6 rounded-lg shadow-lg">
-				<img src="/news/news3.jpg" alt={data.title} className="rounded-lg mb-6 w-full h-80 object-cover shadow-md" />
+				<img
+					src={data.thumbnail ? `${IMAGES_URL}/${data.thumbnail}` : "/news/news3.jpg"}
+					alt={data.title}
+					className="rounded-lg mb-6 w-full h-80 object-cover shadow-md"
+				/>
 				<h1 className="text-3xl font-extrabold text-gray-900 mb-4">{data.title}</h1>
 				<p className="text-gray-700 leading-loose whitespace-pre-line break-words">{data.description}</p>
 			</main>
