@@ -19,6 +19,62 @@ const Navbar: React.FC = () => {
     { id: 6, label: t("navbar.contact"), title: t("navbar.contact"), path: "/contact" },
   ];
 
+  // const menuItems = [
+  //   {
+  //     id: 1,
+  //     label: t("navbar.home"),
+  //     title: t("navbar.home"),
+  //     path: "/",
+  //   },
+  //   {
+  //     id: 2,
+  //     label: t("navbar.about"),
+  //     title: t("navbar.about"),
+  //     path: "/about",
+  //     submenu: [
+  //       { label: t("navbar.about_sub.overview"), path: "/overview" },
+  //       { label: t("navbar.about_sub.advisor"), path: "/cultural-advisor" },
+  //     ],
+  //   },
+  //   {
+  //     id: 3,
+  //     label: t("navbar.services"),
+  //     title: t("navbar.services"),
+  //     path: "/services",
+  //     submenu: [
+  //       { label: t("navbar.services_sub.registration"), path: "/registration" },
+  //       { label: t("navbar.services_sub.diploma"), path: "/diploma-certification" },
+  //       { label: t("navbar.services_sub.sites"), path: "/useful-sites" },
+  //     ],
+  //   },
+  //   {
+  //     id: 4,
+  //     label: t("navbar.activities"),
+  //     title: t("navbar.activities"),
+  //     path: "/activities",
+  //     submenu: [
+  //       { label: t("navbar.activities_sub.events"), path: "/events" },
+  //       { label: t("navbar.activities_sub.cultural"), path: "/cultural-events" },
+  //     ],
+  //   },
+  //   {
+  //     id: 5,
+  //     label: t("navbar.announcements"),
+  //     title: t("navbar.announcements"),
+  //     path: "/announcements",
+  //     submenu: [
+  //       { label: t("navbar.announcements_sub.office"), path: "/office-circulars" },
+  //       { label: t("navbar.announcements_sub.ministry"), path: "/ministry-circulars" },
+  //     ],
+  //   },
+  //   {
+  //     id: 6,
+  //     label: t("navbar.contact"),
+  //     title: t("navbar.contact"),
+  //     path: "/contact",
+  //   },
+  // ];
+
   const languages = [
     { code: "ar", name: "العربية", flag: "flag-icon-ye" },
     { code: "en", name: "English", flag: "flag-icon-gb" },

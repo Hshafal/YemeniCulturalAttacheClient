@@ -7,8 +7,25 @@
     "announcements": "Announcements",
     "contact": "Contact Us",
     "logo": {
-      "title": "الملحقية الثقافية بسفارة الجمهورية اليمنية - موسكو",
-      "subtitle": "Yemeni Cultural Attache - Moscow"
+      "title": "Yemeni Cultural Attache - Moscow",
+      "subtitle": "Йеменское культурное Атташе - Москва"
+    },
+    "about_sub": {
+      "overview": "Overview",
+      "advisor": "Cultural Advisor"
+    },
+    "services_sub": {
+      "registration": "Attache Registration",
+      "diploma": "Diploma Certification",
+      "sites": "Useful Sites"
+    },
+    "activities_sub": {
+      "events": "Activities",
+      "cultural": "Cultural Events"
+    },
+    "announcements_sub": {
+      "office": "Office Circulars",
+      "ministry": "Ministry Circulars"
     }
   },
   "hero": {
@@ -40,9 +57,57 @@
   },
   "about": {
     "title": "About the Cultural Attaché",
-    "description": "The Cultural Attaché aims to support students and researchers by providing comprehensive educational and academic services, and enhancing collaboration between educational and cultural institutions to create an environment that encourages excellence and creativity.",
-    "contact": "Contact Us",
-    "alt": "About the Cultural Attaché"
+    "intro": "The Yemeni Cultural Attaché in Moscow was established as part of efforts to enhance cultural and academic relations between the Republic of Yemen and the Russian Federation. The importance of establishing this attaché lies in supporting Yemeni students studying in Russia, facilitating their academic procedures, and providing them with the necessary support throughout their studies.",
+    "objectives": {
+      "title": "Objectives of Establishing the Cultural Attaché",
+      "points": [
+        "Providing academic and administrative support to Yemeni students studying in Russia.",
+        "Following up on scholarship students in academic matters and resolving any issues they may face.",
+        "Strengthening cultural cooperation between Yemen and Russia by organizing cultural events and exhibitions that showcase Yemeni heritage and Arab culture.",
+        "Establishing direct communication channels between students and Russian educational institutions to facilitate interactions."
+      ]
+    },
+    "tasks": {
+      "title": "Tasks of the Cultural Attaché",
+      "points": [
+        "Archiving student records both physically and electronically.",
+        "Monitoring the academic and administrative conditions of Yemeni students.",
+        "Handling student-related issues.",
+        "Providing information and guidance to new and incoming students in Russia.",
+        "Organizing cultural events and activities that promote mutual understanding between the Yemeni and Russian people.",
+        "Collaborating with Russian educational institutions to facilitate admission and study procedures for Yemeni students.",
+        "Processing certificate authentication procedures.",
+        "Following up on scholarships provided by relevant entities.",
+        "Managing joint cooperation protocols."
+      ]
+    },
+    "relations": {
+      "title": "Yemeni-Russian Relations",
+      "content": "Relations between the Russian Federation and Yemen have a rich history that reflects mutual cooperation in various fields. Diplomatic relations between Russia and Yemen began in the 1920s when the Soviet Union established ties with Yemen. During the Cold War, the Soviet Union supported Yemen in various fields, including culture, education, and science."
+    },
+    "statistics": {
+      "description": "There is no precise and comprehensive statistic detailing the total number of Yemeni students who graduated from Soviet universities. However, estimates suggest that tens of thousands of students graduated over the decades leading up to the dissolution of the Soviet Union. These graduates specialized in various fields such as:",
+      "fields": [
+        "Engineering Sciences",
+        "Health Sciences",
+        "Humanities",
+        "Military Sciences"
+      ]
+    },
+    "advisors": {
+      "title": "Cultural Advisors Since 1990",
+      "list": [
+        { "name": "Dr. Mohammed Ali Abdullah", "years": "1990-1993" },
+        { "name": "Dr. Mohammed Abdulrahman Omar", "years": "1993-1996" },
+        { "name": "Dr. Salem Abdullah Lamlis", "years": "1997-2001" },
+        { "name": "Dr. Yahya Ali Al-Hadhrami", "years": "2001-2002" },
+        { "name": "Dr. Ali Mohammed Al-Saidi", "years": "2002-2004" },
+        { "name": "Dr. Fadhl Mohammed Moqbel", "years": "2004-2008" },
+        { "name": "Dr. Abdullah Mohsen Sarea", "years": "2008-2014" },
+        { "name": "Dr. Anwar Al-Subhi", "years": "2014-2024" },
+        { "name": "Dr. Khaled Qaed Shaafal", "years": "2024-Present" }
+      ]
+    }
   },
   "sections": {
     "title": "Sections of the Cultural Mission",
@@ -72,10 +137,29 @@
     }
   },
   "speech": {
-    "title": "Speech of the Cultural Advisor",
+    "title": "Speech of the Cultural Attaché",
     "content": {
-      "intro": "Welcome to the website of the Cultural Mission, where we strive to provide the best services for students and researchers, and enhance cultural cooperation between countries. Our goal is to support academic and creative excellence and provide a stimulating educational environment that contributes to building a better future for all.",
-      "details": "We also aim to build bridges of cultural communication with various entities to achieve common goals and enhance cultural dialogue. The mission is committed to providing all forms of support to students through academic advice and facilitating communication with universities and institutions."
+      "intro": "In the name of Allah, the Most Gracious, the Most Merciful",
+      "details": {
+        "intro": "Dear esteemed visitors, it gives me great pleasure to welcome you to the official inauguration of the Yemeni Cultural Attaché’s website in the Russian Federation. This event marks a milestone in our journey and a significant step towards enhancing communication and interaction between the attaché and our scholarship students, as well as with educational and cultural institutions in Russia.",
+        "objectives": {
+          "title": "Objectives",
+          "point1": "Providing an electronic platform that serves Yemeni students studying in Russia.",
+          "point2": "Accessing academic, advisory, and other relevant information.",
+          "point3": "Establishing direct communication channels with the attaché.",
+          "point4": "Strengthening cultural ties between Yemen and Russia."
+        },
+        "services": {
+          "title": "Services",
+          "point1": "Publishing news of the Cultural Attaché.",
+          "point2": "Facilitating communication with the Cultural Attaché.",
+          "point3": "Providing information of interest to Yemeni students in Russia.",
+          "point4": "Highlighting important events and activities related to Russia."
+        },
+        "conclusion": "In conclusion, we hope this website serves as a beacon of knowledge and a valuable tool in supporting our scholarship students. May it effectively contribute to fostering cultural and academic cooperation between Yemen and Russia. Peace and blessings be upon you.",
+        "signature": "Dr. Khaled Qaed Sha’fal",
+        "position": "Cultural Attaché in Moscow"
+      }
     },
     "read_more": "Read More",
     "read_less": "Read Less"
