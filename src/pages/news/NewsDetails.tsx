@@ -67,7 +67,7 @@ function RelatedNews() {
 						>
 							<Link to={`/news/${item._id}`} className="flex items-start gap-4">
 								<img
-									src="/news/news3.jpg"
+									src={item.thumbnail ? `${IMAGES_URL}/${item.thumbnail}` : "/news/news3.jpg"}
 									alt={item.title}
 									className="w-16 h-16 object-cover rounded-lg shadow-md"
 								/>
