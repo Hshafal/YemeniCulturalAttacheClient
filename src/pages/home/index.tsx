@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import myAxios from "../../api/myAxios";
 import { shortenString } from "../../utils";
+import { BackgroundGradient } from "../../components/background-gradient";
 // import useNews from "../../api/useNews";
 // import { getDataByLastDays, shortenString } from "../../utils";
 
@@ -129,31 +130,28 @@ const ImportantNewsCard = () => {
 	}
 
 	return (
-		<div>
-			<div className="bg-white border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-4">
-				<h1 className="font-bold text-xl text-center p-5">أخبار هامة</h1>
-				{data &&
-					data.map((news) => {
-						return (
-							<div className="border border-black rounded-md my-2">
-								<Link to={`/news/${news._id}`} className="group">
-									<img
-										src="/news/news3.jpg"
-										alt={news.title}
-										className="rounded-t-lg w-full h-48 object-cover"
-									/>
-									<div className="p-4">
-										<h3 className="text-xl font-semibold text-gray-900 group-hover:text-red-600 transition-colors">
-											{news.title}
-										</h3>
-										<p className="text-gray-600 mt-2">{shortenString(news.description)}</p>
-									</div>
-								</Link>
-							</div>
-						);
-					})}
+		<BackgroundGradient className="rounded-[22px] bg-white dark:bg-zinc-900">
+			<div>
+				<div className="bg-white rounded-[22px] border shadow-sm hover:shadow-md transition-shadow duration-200 p-4">
+					<h1 className="font-bold text-3xl text-center p-5 text-red-600">هـــــام</h1>
+					{data &&
+						data.map((news) => {
+							return (
+								<div className="border border-black rounded-md my-2">
+									<Link to={`/news/${news._id}`} className="group">
+										<div className="p-4">
+											<h3 className="text-xl font-semibold text-gray-900 hover:text-red-600 transition-colors">
+												{news.title}
+											</h3>
+											<p className="text-gray-600 mt-2">{shortenString(news.description)}</p>
+										</div>
+									</Link>
+								</div>
+							);
+						})}
+				</div>
 			</div>
-		</div>
+		</BackgroundGradient>
 	);
 };
 
