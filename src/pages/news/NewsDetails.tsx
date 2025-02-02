@@ -34,7 +34,7 @@ const NewsDetails: React.FC = () => {
 				<img
 					src={data.thumbnail ? `${IMAGES_URL}/${data.thumbnail}` : "/news/news3.jpg"}
 					alt={data.title}
-					className="rounded-lg mb-6 w-full h-80 object-cover shadow-md"
+					className="rounded-lg mb-6 w-full object-cover shadow-md"
 				/>
 				<h1 className="text-3xl font-extrabold text-gray-900 mb-4">{data.title}</h1>
 				<p className="text-gray-700 leading-loose whitespace-pre-line break-words">{data.description}</p>
