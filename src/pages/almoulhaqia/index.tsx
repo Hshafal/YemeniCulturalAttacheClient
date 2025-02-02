@@ -3,13 +3,13 @@ import About  from "./About";
 import { Sections } from "./Sections";
 import Speach from "./Speach";
 import TeamHierarchy from "./TeamHierarchy";
-import Boffer from "./Boffer";
+// import Boffer from "./Boffer";
 import Contact from "../../components/Contact";
 
 const AlMoulhaqia: React.FC = () => {
   return (
     <div>
-      <Boffer />
+      {/* <Boffer /> */}
       <About />
       <Sections />
       <Speach />

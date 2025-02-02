@@ -21,11 +21,7 @@ const Boffer: React.FC = () => {
 								{t("boffer.title")}
 							</h1>
 						</div>
-						<div className="h-8 md:h-20 bg-black flex justify-start items-center ">
-							<p className="w-60 mx-10 md:w-full md:text-lg text-xs lg:text-3xl text-white">
-								{t("boffer.description")}
-							</p>
-						</div>
+						<div className="h-8 md:h-20 bg-black flex justify-start items-center "></div>
 					</div>
 				</div>
 
