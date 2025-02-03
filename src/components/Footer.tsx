@@ -17,7 +17,8 @@ const Footer: React.FC = () => {
 			toast.success("تم ارسال الايميل بنجاح");
 			setEmail("");
 		},
-		onError: () => {
+		onError: (error) => {
+      console.log(error)
 			toast.error("خطأ في ارسال الايميل");
 		},
 	});
