@@ -22,7 +22,7 @@ const NewsList: React.FC = () => {
 
 	return (
 		<section className="flex items-center justify-center min-h-auto py-12 px-4">
-			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl">
+			<div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 max-w-7xl">
 				{limitedNews.map((news) => (
 					<div
 						key={news._id}
