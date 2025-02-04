@@ -81,8 +81,10 @@ const HomePage: React.FC = () => {
     <div>
       <HeroSlider slides={slides} />
 
-      <div className="flex justify-center items-center md:flex-row flex-col-reverse ">
+      <div className="flex justify-center items-center md:flex-row flex-col-reverse max-w-7xl mx-auto">
+
         <main className="w-3/4 p-4">
+          <h1 className="font-bold text-3xl text-center">{t("news.main_news")}</h1>
           <NewsList />
           <div className="text-center m-2">
             <Link
@@ -98,7 +100,7 @@ const HomePage: React.FC = () => {
           <ImportantNewsCard />
         </aside>
       </div>
-      
+
       <Support />
       <Contact />
     </div>
@@ -134,7 +136,7 @@ const ImportantNewsCard = () => {
   return (
     <BackgroundGradient className="rounded-[22px] bg-white dark:bg-zinc-900">
       <div>
-        <div className="bg-white rounded-[22px] border shadow-sm hover:shadow-md transition-shadow duration-200 p-4">
+        <div className="bg-white rounded-[22px] border shadow-sm hover:shadow-md transition-shadow duration-200 p-4 ">
           <h1 className="font-bold text-3xl text-center p-5 text-red-600">هـــــام</h1>
           {data &&
             data.map((news) => {
