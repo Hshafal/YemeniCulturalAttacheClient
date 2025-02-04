@@ -90,9 +90,9 @@ const Navbar: React.FC = () => {
   };
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem("selectedLanguage") || i18n.language || "ar";
+    const savedLanguage = localStorage.getItem("selectedLanguage") || i18n.language || "en";
     i18n.changeLanguage(savedLanguage);
-    const initialFlag = languages.find((lang) => lang.code === savedLanguage)?.flag || "flag-icon-ye";
+    const initialFlag = languages.find((lang) => lang.code === savedLanguage)?.flag || "flag-icon-gb";
     setCurrentFlag(initialFlag);
   }, [i18n]);
 
@@ -119,7 +119,7 @@ const Navbar: React.FC = () => {
 						</div>
 					</div>
 
-          <div className="block md:hidden text-black text-center font-black">
+          <div className="block md:hidden text-black text-center text-xs font-black">
                 {t("navbar.logo.subtitle")}
           </div>
 

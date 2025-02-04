@@ -33,6 +33,15 @@
     "description": "Provides comprehensive and accurate information for all Yemeni students in Russia.",
     "read_more": "Read More"
   },
+  "support": {
+    "title": "Support",
+    "tech_support": "Technical Support",
+    "email": "Email",
+    "phone": "Phone"
+  },
+  "news": {
+    "main_news": "Main News"
+  },
   "contact": {
     "title": "Contact Us",
     "address": "Address",
