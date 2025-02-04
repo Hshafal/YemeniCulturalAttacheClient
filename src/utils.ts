@@ -15,3 +15,11 @@ export function shortenString(longString: string) {
 		return longString.substring(0, 100) + "...";
 	}
 }
+
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+

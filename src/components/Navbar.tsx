@@ -96,6 +96,8 @@ const Navbar: React.FC = () => {
     setCurrentFlag(initialFlag);
   }, [i18n]);
 
+  console.log("********", i18n.language);
+
   return (
 		<div
 			dir="ltr"

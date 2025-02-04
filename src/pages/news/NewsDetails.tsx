@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import myAxios, { IMAGES_URL } from "../../api/myAxios";
+import { Helmet } from "react-helmet";
 
 const NewsDetails: React.FC = () => {
 	const { id } = useParams();
@@ -25,6 +26,9 @@ const NewsDetails: React.FC = () => {
 
 	return (
 		<div dir="rtl" className="container mx-auto px-6 py-10 lg:flex lg:gap-12">
+			<Helmet>
+				<title>{data.title}</title>
+			</Helmet>
 			{/* Main Article Section */}
 			<main className="lg:flex-1 bg-white p-6 rounded-lg shadow-lg">
 				<img
@@ -63,7 +67,7 @@ function RelatedNews() {
 						>
 							<Link to={`/news/${item._id}`} className="flex items-start gap-4">
 								<img
-									src="/news/news3.jpg"
+									src={item.thumbnail ? `${IMAGES_URL}/${item.thumbnail}` : "/news/news3.jpg"}
 									alt={item.title}
 									className="w-16 h-16 object-cover rounded-lg shadow-md"
 								/>
