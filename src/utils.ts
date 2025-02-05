@@ -25,11 +25,11 @@ export function sortByDate(newsArticles: News[]): News[] {
 }
 
 export function formatDate(isoDate: string | undefined): string {
-	if(!isoDate) return ""
+    if (!isoDate) return "";
 
-	const date = new Date(isoDate);
-	const options: Intl.DateTimeFormatOptions = { year: "numeric", month: "numeric", day: "numeric" };
-	return date.toLocaleDateString(undefined, options);
+    const date = new Date(isoDate);
+    const options: Intl.DateTimeFormatOptions = { year: "numeric", month: "numeric", day: "numeric" };
+    return date.toLocaleDateString('ru-RU', options);
 }
 
 import { ClassValue, clsx } from "clsx";
