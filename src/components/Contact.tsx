@@ -62,10 +62,16 @@ const Contact: React.FC = () => {
               </div>
             </div>
           ))}
-          <div className="flex items-center justify-start gap-6 ">
-            <FaYoutube className="text-4xl text-red-600" />
-            <FaWhatsapp className="text-4xl text-green-500" />
-            <FaTelegramPlane className="text-4xl text-blue-500" />
+          <div className="flex items-center justify-start gap-6">
+            <a href="https://www.youtube.com/@yemeniculturalattache-moscow?si=juCYyUeTtSIXybEi" target="_blank" rel="noopener noreferrer">
+              <FaYoutube className="text-4xl text-red-600" />
+            </a>
+            <a href="https://wa.me/+7 499-246-31-06" target="_blank" rel="noopener noreferrer">
+              <FaWhatsapp className="text-4xl text-green-500" />
+            </a>
+            <a href="https://t.me/Cultural_attache_of_Yem_Rus" target="_blank" rel="noopener noreferrer">
+              <FaTelegramPlane className="text-4xl text-blue-500" />
+            </a>
           </div>
         </div>
       </div>
