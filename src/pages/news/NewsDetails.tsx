@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import myAxios, { IMAGES_URL } from "../../api/myAxios";
 import { Helmet } from "react-helmet";
+import { formatDate, sortByDate } from "../../utils";
 
 const NewsDetails: React.FC = () => {
 	const { id } = useParams();
@@ -37,6 +38,7 @@ const NewsDetails: React.FC = () => {
 					alt={data.title}
 					className="rounded-lg mb-6 w-full h-80 object-cover shadow-md"
 				/>
+				<p>{formatDate(data.date)}</p>
 				<h1 className="text-3xl font-extrabold text-gray-900 mb-4">{data.title}</h1>
 				<p className="text-gray-700 leading-loose whitespace-pre-line break-words">{data.description}</p>
 			</main>
@@ -61,7 +63,7 @@ function RelatedNews() {
 			<h2 className="text-2xl font-bold text-gray-900 mb-6">أخبار ذات صلة</h2>
 			<ul className="space-y-6">
 				{allNews &&
-					allNews.map((item) => (
+					sortByDate(allNews).map((item) => (
 						<li
 							key={item._id}
 							className="border p-2 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
@@ -72,6 +74,7 @@ function RelatedNews() {
 									alt={item.title}
 									className="w-16 h-16 object-cover rounded-lg shadow-md"
 								/>
+								<p>{formatDate(item.date)}</p>
 								<div>
 									<h3 className="text-blue-600 hover:text-blue-800 hover:underline font-medium">
 										{item.title}

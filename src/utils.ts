@@ -16,8 +16,25 @@ export function shortenString(longString: string) {
 	}
 }
 
+export function sortByDate(newsArticles: News[]): News[] {
+	return newsArticles.sort((a, b) => {
+		const dateA = a.date ? new Date(a.date) : new Date(0); // Default to epoch if date is undefined
+		const dateB = b.date ? new Date(b.date) : new Date(0); // Default to epoch if date is undefined
+		return dateB.getTime() - dateA.getTime();
+	});
+}
+
+export function formatDate(isoDate: string | undefined): string {
+	if(!isoDate) return ""
+
+	const date = new Date(isoDate);
+	const options: Intl.DateTimeFormatOptions = { year: "numeric", month: "long", day: "numeric" };
+	return date.toLocaleDateString(undefined, options);
+}
+
 import { ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { News } from "./types";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
