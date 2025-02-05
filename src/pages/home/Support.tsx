@@ -17,8 +17,8 @@ const Support: React.FC = () => {
       id: 2,
       icon: <FaEnvelope className="text-4xl text-red-500" />,
       label: t("support.email"),
-      value: "mailto:support@yemculru.com",
-      displayValue: "support@yemculru.com",
+      value: "mailto:yemculru@gmail.com",
+      displayValue: "yemculru@gmail.com",
       isLink: true,
     },
     {

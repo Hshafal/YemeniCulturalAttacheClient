@@ -18,8 +18,8 @@ const Contact: React.FC = () => {
       id: 2,
       icon: <FaEnvelope className="text-3xl flex-shrink-0 text-orange-500" />,
       label: t("contact.email"),
-      value: "mailto:yemculru@gmail.com",
-      displayValue: "yemculru@gmail.com",
+      value: "mailto:mulhakia_rus@hotmail.com",
+      displayValue: "mulhakia_rus@hotmail.com",
       isLink: true,
     },
     {
