@@ -28,6 +28,7 @@ const NewsDetails: React.FC = () => {
 		<div dir="rtl" className="container mx-auto px-6 py-10 lg:flex lg:gap-12">
 			<Helmet>
 				<title>{data.title}</title>
+				<meta name="description" content={data.description} />
 			</Helmet>
 			{/* Main Article Section */}
 			<main className="lg:flex-1 bg-white p-6 rounded-lg shadow-lg">
