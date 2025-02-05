@@ -14,6 +14,8 @@ import SetDirection from "./components/SetDirection";
 import NewsPage from "./pages/news/NewsPage";
 import NewsDetails from "./pages/news/NewsDetails";
 
+import Speech from "./pages/almoulhaqia/Speach";
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -56,6 +58,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/almoulhaqia" element={<Almoulhaqia />} />
+					<Route path="/speach" element={<Speech />} />
 					<Route path="/services" element={<OnlineServices />} />
 					<Route path="/activities" element={<CulturalActivities />} />
 					<Route path="/news" element={<NewsPage />} />

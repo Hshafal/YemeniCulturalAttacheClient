@@ -25,8 +25,8 @@ const Support: React.FC = () => {
       id: 3,
       icon: <FaPhoneAlt className="text-4xl text-green-600" />,
       label: t("support.phone"),
-      value: "tel:+7 917-482-84-74",
-      displayValue: "+7 917-482-84-74",
+      value: "tel:+7 968 625-77-72",
+      displayValue: "+7 968 625-77-72",
       isLink: true,
     },
   ];
@@ -52,17 +52,20 @@ const Support: React.FC = () => {
           {supportInfo.map((item) => (
             <div key={item.id} className="flex items-start gap-4">
               {item.icon}
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">{item.label}</h3>
+              <div className="flex flex-col">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2" dir="rtl">
+                  {item.label}
+                </h3>
                 {item.isLink ? (
-                  <a href={item.value} className="text-blue-600 hover:underline">
+                  <a href={item.value} className="text-blue-600 hover:underline" dir="ltr">
                     {item.displayValue}
                   </a>
                 ) : (
-                  <p className="text-gray-600">{item.value}</p>
+                  <p className="text-gray-600" dir="ltr">{item.value}</p>
                 )}
               </div>
             </div>
+
           ))}
         </div>
       </div>

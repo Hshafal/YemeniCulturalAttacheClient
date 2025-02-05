@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import myAxios from "../../api/myAxios";
 import { shortenString } from "../../utils";
-import Support from "./Support";
 import { BackgroundGradient } from "../../components/background-gradient";
 // import useNews from "../../api/useNews";
 // import { getDataByLastDays, shortenString } from "../../utils";
@@ -83,8 +82,11 @@ const HomePage: React.FC = () => {
 
       <div className="flex justify-center items-center md:flex-row flex-col-reverse max-w-7xl mx-auto">
 
-        <main className="w-3/4 p-4">
-          <h1 className="font-bold text-3xl text-center">{t("news.main_news")}</h1>
+        <main className="w-3/4 p-1">
+          <div className="flex gap-3">
+            <div className="h-10 w-2 bg-red-500"></div>
+            <h1 className="font-bold text-3xl text-right ">{t("news.main_news")}</h1>
+          </div>
           <NewsList />
           <div className="text-center m-2">
             <Link
@@ -101,7 +103,6 @@ const HomePage: React.FC = () => {
         </aside>
       </div>
 
-      <Support />
       <Contact />
     </div>
   );

@@ -61,14 +61,7 @@ const TeamHierarchy: React.FC = () => {
       image: '/person.png',
       bio: t('team.academic.bio'),
       cvLink: '/cv.pdf',
-    },
-    {
-      name: t('team.publicRelations.name'),
-      title: t('team.publicRelations.title'),
-      image: '/person.png',
-      bio: t('team.publicRelations.bio'),
-      cvLink: '/cv.pdf',
-    },
+    }
   ];
 
   return (

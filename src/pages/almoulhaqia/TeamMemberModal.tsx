@@ -10,7 +10,7 @@ interface TeamMemberModalProps {
   cvLink: string;
 }
 
-const TeamMemberModal: React.FC<TeamMemberModalProps> = ({ isOpen, onClose, name, title, image, bio, cvLink }) => {
+const TeamMemberModal: React.FC<TeamMemberModalProps> = ({ isOpen, onClose, name, title, image, bio }) => {
   if (!isOpen) return null;
 
   return (
@@ -21,7 +21,7 @@ const TeamMemberModal: React.FC<TeamMemberModalProps> = ({ isOpen, onClose, name
           &times;
         </button>
 
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center gap-4">
           <img src={image} alt={name} className="w-20 h-20 rounded-full border-2 border-gray-500" />
           <div>
             <h3 className="text-xl font-semibold">{name}</h3>
@@ -30,7 +30,7 @@ const TeamMemberModal: React.FC<TeamMemberModalProps> = ({ isOpen, onClose, name
           </div>
         </div>
 
-        <div className="mt-4">
+        {/* <div className="mt-4">
           <h4 className="font-semibold text-lg">CV</h4>
           <iframe
             src={cvLink} 
@@ -38,7 +38,7 @@ const TeamMemberModal: React.FC<TeamMemberModalProps> = ({ isOpen, onClose, name
             frameBorder="0"
             title="CV"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

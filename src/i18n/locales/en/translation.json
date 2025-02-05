@@ -34,7 +34,7 @@
     "read_more": "Read More"
   },
   "support": {
-    "title": "Support",
+    "title": "Technical Support",
     "tech_support": "Technical Support",
     "email": "Email",
     "phone": "Phone"
@@ -174,36 +174,36 @@
     "read_less": "Read Less"
   },
   "team": {
-    "title": "Team Members",
+    "title": "Cultural Attaché Team",
     "advisor": {
-      "name": "Dr. Khalid Sha'fal",
+      "name": "Dr. Khaled Sha'fal",
       "title": "Cultural Advisor",
-      "bio": "Biography of Dr. Khalid Sha'lal."
+      "bio": "Bio of Dr. Khaled Sha'fal."
     },
     "assistant": {
       "name": "Mr. Fouad Al-Taifi",
       "title": "Assistant Cultural Advisor",
-      "bio": "Biography of Mr. Fouad Al-Taifi."
+      "bio": "Bio of Mr. Fouad Al-Taifi."
     },
     "secretary": {
-      "name": "Flora",
-      "title": "Secretary",
-      "bio": "Biography of Flora."
+      "name": "Secretariat",
+      "title": "",
+      "bio": "Handles all matters related to mail, archiving, correspondence with universities, and other well-known secretarial tasks."
     },
     "it": {
-      "name": "Tech Person",
-      "title": "Information Technology",
-      "bio": "Biography of Tech Person."
+      "name": "Information Systems",
+      "title": "",
+      "bio": "Responsible for establishing the attaché’s technical infrastructure: internal network, website, online magazine, statistics and reports, and various electronic services."
     },
     "academic": {
-      "name": "Mr. Mansour Al-Salawi",
-      "title": "Academic Affairs",
-      "bio": "Biography of Mr. Mansour Al-Salawi."
+      "name": "Academic Affairs",
+      "title": "",
+      "bio": "Responsible for monitoring students’ academic progress and communicating with educational institutions."
     },
     "publicRelations": {
-      "name": "Dr. Ahmed Al-Maglis",
+      "name": "Dr. Ahmed Al-Mughlis",
       "title": "Public Relations and Media",
-      "bio": "Biography of Dr. Ahmed Al-Maglis."
+      "bio": "Bio of Dr. Ahmed Al-Mughlis."
     }
   },
   "culturalMagazine": {

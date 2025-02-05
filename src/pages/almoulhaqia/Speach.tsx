@@ -1,13 +1,7 @@
-import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const Speech: React.FC = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
   const { t } = useTranslation();
-
-  const toggleReadMore = () => {
-    setIsExpanded(!isExpanded);
-  };
 
   return (
     <section className="p-4">
@@ -20,7 +14,7 @@ const Speech: React.FC = () => {
             <p className="text-gray-800 text-lg text-center w-full font-bold ">
               {t('speech.content.intro')}
             </p>
-            {isExpanded && (
+            
               <div className="mt-6 text-gray-800 text-lg font-normal leading-relaxed">
                 <p className="mb-4">{t('speech.content.details.intro')}</p>
                 <h3 className="text-xl font-bold mb-2">✔ {t('speech.content.details.objectives.title')}</h3>
@@ -41,13 +35,6 @@ const Speech: React.FC = () => {
                 <p className="mt-4 text-left font-bold">{t('speech.content.details.signature')}</p>
                 <p className="text-left font-bold">{t('speech.content.details.position')}</p>
               </div>
-            )}
-            <button
-              onClick={toggleReadMore}
-              className="text-blue-500 font-medium underline mt-4"
-            >
-              {isExpanded ? t('speech.read_less') : t('speech.read_more')}
-            </button>
           </div>
         </div>
       </div>

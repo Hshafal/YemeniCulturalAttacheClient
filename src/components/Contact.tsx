@@ -1,6 +1,7 @@
 import React from "react";
 import { FaEnvelope, FaPhoneAlt, FaWhatsapp, FaMapMarkerAlt, FaYoutube, FaTelegramPlane } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import Support from "../pages/home/Support";
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
@@ -26,33 +27,9 @@ const Contact: React.FC = () => {
       icon: <FaPhoneAlt className="text-3xl flex-shrink-0 text-green-600" />,
       label: t("contact.phone"),
       value: "tel:+7 499-246-31-06",
-      displayValue: "499-246-31-06",
+      displayValue: "+7 499-246-31-06",
       isLink: true,
-    },
-    {
-      id: 4,
-      icon: <FaWhatsapp className="text-3xl flex-shrink-0 text-green-500" />,
-      label: t("contact.whatsapp"),
-      value: "https://wa.me/+79686257772",
-      displayValue: t("contact.whatsapp_message"),
-      isLink: true,
-    },
-    {
-      id: 5,
-      icon: <FaYoutube className="text-3xl flex-shrink-0 text-red-600" />,
-      label: "YouTube",
-      value: "https://www.youtube.com/@yemeniculturalattache-moscow",
-      displayValue: "Visit our YouTube channel",
-      isLink: true,
-    },
-    {
-      id: 6,
-      icon: <FaTelegramPlane className="text-3xl flex-shrink-0 text-blue-500" />,
-      label: "Telegram",
-      value: "https://t.me/Cultural_attache_of_Yem_Rus",
-      displayValue: "Join us on Telegram",
-      isLink: true,
-    },
+    }
   ];
 
   return (
@@ -76,17 +53,24 @@ const Contact: React.FC = () => {
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">{item.label}</h3>
                 {item.isLink ? (
-                  <a href={item.value} className="hover:underline text-blue-600" target="_blank" rel="noopener noreferrer">
+                  <a href={item.value} className="hover:underline text-blue-600" dir="ltr" target="_blank" rel="noopener noreferrer">
                     {item.displayValue}
                   </a>
                 ) : (
-                  <p className="text-gray-600">{item.value}</p>
+                  <p className="text-gray-600" >{item.value}</p>
                 )}
               </div>
             </div>
           ))}
+          <div className="flex items-center justify-start gap-6 ">
+            <FaYoutube className="text-4xl text-red-600" />
+            <FaWhatsapp className="text-4xl text-green-500" />
+            <FaTelegramPlane className="text-4xl text-blue-500" />
+          </div>
         </div>
       </div>
+      <Support />
+
     </div>
   );
 };
