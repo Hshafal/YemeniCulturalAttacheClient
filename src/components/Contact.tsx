@@ -69,7 +69,9 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </div>
-      <Support />
+      <div className="py-4">
+        <Support />
+      </div>
 
     </div>
   );
