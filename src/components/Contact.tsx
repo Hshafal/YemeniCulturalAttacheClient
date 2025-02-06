@@ -1,10 +1,12 @@
 import React from "react";
 import { FaEnvelope, FaPhoneAlt, FaWhatsapp, FaMapMarkerAlt, FaYoutube, FaTelegramPlane } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom"; // Import useLocation hook to access the current path
 import Support from "../pages/home/Support";
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
+  const location = useLocation(); // Get the current location/path
 
   const contactInfo = [
     {
@@ -57,7 +59,7 @@ const Contact: React.FC = () => {
                     {item.displayValue}
                   </a>
                 ) : (
-                  <p className="text-gray-600" >{item.value}</p>
+                  <p className="text-gray-600">{item.value}</p>
                 )}
               </div>
             </div>
@@ -66,19 +68,23 @@ const Contact: React.FC = () => {
             <a href="https://www.youtube.com/@yemeniculturalattache-moscow?si=juCYyUeTtSIXybEi" target="_blank" rel="noopener noreferrer">
               <FaYoutube className="text-4xl text-red-600" />
             </a>
-            <a href="https://wa.me/+7 499-246-31-06" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/74992463106" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp className="text-4xl text-green-500" />
             </a>
+
             <a href="https://t.me/Cultural_attache_of_Yem_Rus" target="_blank" rel="noopener noreferrer">
               <FaTelegramPlane className="text-4xl text-blue-500" />
             </a>
           </div>
         </div>
       </div>
-      <div className="py-4">
-        <Support />
-      </div>
 
+      {/* Conditionally render the Support component */}
+      {(location.pathname === "/contact" || location.pathname === "http://localhost:5173/contact") && (
+        <div className="py-4">
+          <Support />
+        </div>
+      )}
     </div>
   );
 };
