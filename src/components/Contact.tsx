@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
             <a href="https://www.youtube.com/@yemeniculturalattache-moscow?si=juCYyUeTtSIXybEi" target="_blank" rel="noopener noreferrer">
               <FaYoutube className="text-4xl text-red-600" />
             </a>
-            <a href="https://wa.me/74992463106" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/+79686257772" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp className="text-4xl text-green-500" />
             </a>
 
