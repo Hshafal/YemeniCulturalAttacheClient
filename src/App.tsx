@@ -58,7 +58,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/almoulhaqia" element={<Almoulhaqia />} />
-					<Route path="/speach" element={<Speech />} />
+					<Route path="/speech" element={<Speech />} />
 					<Route path="/services" element={<OnlineServices />} />
 					<Route path="/activities" element={<CulturalActivities />} />
 					<Route path="/news" element={<NewsPage />} />

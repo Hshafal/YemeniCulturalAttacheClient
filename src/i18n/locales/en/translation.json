@@ -1,30 +1,36 @@
 {
   "navbar": {
     "home": "Home",
-    "about": "About Us",
-    "services": "Online Services",
-    "activities": "Cultural Activities",
-    "announcements": "Announcements",
+    "about": "About the Attaché",
+    "services": "E-Services",
+    "activities": "Activities & Events",
+    "announcements": "Announcements & Notifications",
     "contact": "Contact Us",
     "logo": {
-      "title": "Yemeni Cultural Attache - Moscow",
-      "subtitle": "Yemeni Cultural Attache - Moscow"
+      "title": "Yemeni Cultural Attaché - Moscow",
+      "subtitle": "Yemeni Cultural Attaché - Moscow"
     },
     "about_sub": {
       "overview": "Overview",
       "advisor": "Cultural Advisor"
     },
     "services_sub": {
-      "registration": "Attache Registration",
-      "diploma": "Diploma Certification",
-      "sites": "Useful Sites"
+      "students": "Student Services",
+      "registration": "Attaché Registration",
+      "diploma": "Diploma Authentication",
+      "scholarships": "Russian Scholarships Registration",
+      "study_in_russia": "Study in Russia",
+      "universities": "Guide to Accredited Russian Universities",
+      "useful_sites": "Useful Websites",
+      "statistics": "Student Statistics",
+      "regulations": "Regulations & Policies"
     },
     "activities_sub": {
       "events": "Activities",
       "cultural": "Cultural Events"
     },
     "announcements_sub": {
-      "office": "Office Circulars",
+      "office": "Attaché Circulars",
       "ministry": "Ministry Circulars"
     }
   },

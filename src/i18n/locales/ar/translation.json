@@ -2,7 +2,7 @@
   "navbar": {
     "home": "الرئيسية",
     "about": "عن الملحقية",
-    "services": "خدمات الكترونية",
+    "services": "الخدمات الإلكترونية",
     "activities": "الأنشطة والفعاليات",
     "announcements": "الإعلانات والإشعارات",
     "contact": "اتصل بنا",
@@ -15,9 +15,15 @@
       "advisor": "المستشار الثقافي"
     },
     "services_sub": {
-      "registration": "تسجيل الملحقية",
-      "diploma": "تصديق الدبلوم",
-      "sites": "مواقع تهمك"
+      "students": "خدمات الطلاب",
+      "registration": "التسجيل في الملحقية",
+      "diploma": "تعميد الدبلوم",
+      "scholarships": "التسجيل في المنح الروسية",
+      "study_in_russia": "الدراسة في روسيا",
+      "universities": "دليل الجامعات الروسية المعتمدة",
+      "useful_sites": "مواقع تهمك",
+      "statistics": "إحصائيات طلابية",
+      "regulations": "اللوائح والقوانين"
     },
     "activities_sub": {
       "events": "الأنشطة",
