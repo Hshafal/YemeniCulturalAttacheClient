@@ -7,7 +7,7 @@ const About: React.FC = () => {
   const getImageSrc = () => {
     if (i18n.language.startsWith("ar")) return "/avitorsar.jpeg";
     if (i18n.language.startsWith("ru")) return "/avitorsru.jpeg";
-    return "/public/avitors.jpeg";
+    return "/avitors.jpeg";
   };
 
   // Ensure correct types to prevent TypeScript errors
