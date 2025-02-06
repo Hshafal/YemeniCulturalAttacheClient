@@ -18,13 +18,17 @@ const Footer: React.FC = () => {
 			setEmail("");
 		},
 		onError: (error) => {
-      console.log(error)
+			console.log(error);
 			toast.error("خطأ في ارسال الايميل");
 		},
 	});
 
 	function handleSubmit(e: React.FormEvent) {
 		e.preventDefault();
+		if (!email.endsWith("@gmail.com")) {
+			toast.error("عذراً، ندعم فقط عناوين البريد الإلكتروني من Gmail. سيتم إضافة مزودي بريد آخرين قريباً.");
+			return;
+		}
 		mutate({ email });
 	}
 
