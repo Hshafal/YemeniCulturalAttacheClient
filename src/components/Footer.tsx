@@ -4,6 +4,7 @@ import { useMutation } from "@tanstack/react-query";
 import myAxios from "../api/myAxios";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import VisitorStats from "./VisitorStats";
 
 const Footer: React.FC = () => {
 	const { t } = useTranslation();
@@ -80,6 +81,7 @@ const Footer: React.FC = () => {
 				<div className="text-sm">
 					<hr />
 					<p className="p-2">© 2025 - {t("footer.rights_reserved")}</p>
+					<VisitorStats />
 					<p>
 						تم تطوير الموقع بواسطة
 						<span>

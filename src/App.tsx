@@ -16,7 +16,6 @@ import NewsDetails from "./pages/news/NewsDetails";
 
 import Speech from "./pages/almoulhaqia/Speach";
 import myAxios from "./api/myAxios";
-import VisitorStats from "./components/VisitorStats";
 
 function App() {
 	const [loading, setLoading] = useState(true);
@@ -64,7 +63,6 @@ function App() {
 			<Router>
 				<SetDirection />
 				<Navbar />
-        <VisitorStats />
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/almoulhaqia" element={<Almoulhaqia />} />
