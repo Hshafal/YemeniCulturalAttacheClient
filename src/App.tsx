@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/home";
 import Almoulhaqia from "./pages/almoulhaqia";
 import CulturalActivities from "./pages/CulturalActivities";
-// import Loading from "./components/Loading";
+import Loading from "./components/Loading";
 import OnlineServices from "./pages/OnlineServices/OnlineServices";
 import AnnouncementsAndNotifications from "./pages/addsAndNotifications/Index";
 import { FaArrowUp } from "react-icons/fa";
@@ -21,8 +21,6 @@ import CulturalMagazine from  './pages/CulturalMagazine/CulturalMagazine'
 
 
 import myAxios from "./api/myAxios";
-import Loading from "./components/Loading";
-
 function App() {
 	const [loading, setLoading] = useState(true);
 	const [showScrollButton, setShowScrollButton] = useState(false);
