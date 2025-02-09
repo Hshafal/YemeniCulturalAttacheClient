@@ -16,43 +16,52 @@ import NewsDetails from "./pages/news/NewsDetails";
 import LawsAndRegulations from "./pages/LawsAndRegulations/LawsAndRegulations";
 
 import Speech from "./pages/almoulhaqia/Speach";
+<<<<<<< HEAD
 import Events from "./pages/events/index";
 import CulturalMagazine from  './pages/CulturalMagazine/CulturalMagazine'
 
+=======
+import myAxios from "./api/myAxios";
+>>>>>>> cfd64cd6e834ede843a412bc0c5af33d894e03c5
 
 function App() {
-  const [loading, setLoading] = useState(true);
-  const [showScrollButton, setShowScrollButton] = useState(false);
+	const [loading, setLoading] = useState(true);
+	const [showScrollButton, setShowScrollButton] = useState(false);
 
-  useEffect(() => {
-    // Simulate loading time (e.g., API calls, fetching resources, etc.)
-    const timer = setTimeout(() => setLoading(false), 1000);
-    return () => clearTimeout(timer);
-  }, []);
+	useEffect(() => {
+		// Simulate loading time (e.g., API calls, fetching resources, etc.)
+		const timer = setTimeout(() => setLoading(false), 1000);
+		return () => clearTimeout(timer);
+	}, []);
 
-  // Show the scroll-to-top button when user scrolls down
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.pageYOffset > 300) {
-        setShowScrollButton(true);
-      } else {
-        setShowScrollButton(false);
-      }
-    };
+	// Show the scroll-to-top button when user scrolls down
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.pageYOffset > 300) {
+				setShowScrollButton(true);
+			} else {
+				setShowScrollButton(false);
+			}
+		};
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
 
-  // Function to scroll back to top
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  // Make a request to the backend to log the visit
+	useEffect(() => {
+		myAxios
+			.get("/visitors/log")
+			.then((response) => console.log("Visit logged", response.data))
+			.catch((error) => console.error("Error logging visit", error));
+	}, []);
 
-  if (loading) {
-    return <Loading />;
-  }
+	// Function to scroll back to top
+	const scrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: "smooth" });
+	};
 
+<<<<<<< HEAD
   return (
     <div>
       <Router>
@@ -94,6 +103,43 @@ function App() {
       )}
     </div>
   );
+=======
+	if (loading) {
+		return <Loading />;
+	}
+
+	return (
+		<div>
+			<Router>
+				<SetDirection />
+				<Navbar />
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/almoulhaqia" element={<Almoulhaqia />} />
+					<Route path="/speech" element={<Speech />} />
+					<Route path="/services" element={<OnlineServices />} />
+					<Route path="/activities" element={<CulturalActivities />} />
+					<Route path="/news" element={<NewsPage />} />
+					<Route path="/news/:id" element={<NewsDetails />} />
+					<Route path="/announcements" element={<AnnouncementsAndNotifications />} />
+					<Route path="/contact" element={<Contact />} />
+				</Routes>
+				<Footer />
+			</Router>
+
+			{/* Scroll-to-top button */}
+			{showScrollButton && (
+				<button
+					onClick={scrollToTop}
+					className="fixed bottom-4 right-4 bg-red-500 text-white p-3 rounded-full shadow-lg hover:bg-red-700 focus:outline-none"
+					aria-label="Scroll to top"
+				>
+					<FaArrowUp size={20} />
+				</button>
+			)}
+		</div>
+	);
+>>>>>>> cfd64cd6e834ede843a412bc0c5af33d894e03c5
 }
 
 export default App;

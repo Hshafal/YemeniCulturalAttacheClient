@@ -4,6 +4,7 @@ import { useMutation } from "@tanstack/react-query";
 import myAxios from "../api/myAxios";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import VisitorStats from "./VisitorStats";
 
 const Footer: React.FC = () => {
 	const { t } = useTranslation();
@@ -18,13 +19,17 @@ const Footer: React.FC = () => {
 			setEmail("");
 		},
 		onError: (error) => {
-      console.log(error)
+			console.log(error);
 			toast.error("خطأ في ارسال الايميل");
 		},
 	});
 
 	function handleSubmit(e: React.FormEvent) {
 		e.preventDefault();
+		if (!email.endsWith("@gmail.com")) {
+			toast.error("عذراً، ندعم فقط عناوين البريد الإلكتروني من Gmail. سيتم إضافة مزودي بريد آخرين قريباً.");
+			return;
+		}
 		mutate({ email });
 	}
 
@@ -76,6 +81,7 @@ const Footer: React.FC = () => {
 				<div className="text-sm">
 					<hr />
 					<p className="p-2">© 2025 - {t("footer.rights_reserved")}</p>
+					<VisitorStats />
 					<p>
 						تم تطوير الموقع بواسطة
 						<span>
