@@ -1,4 +1,4 @@
-import CulturalWeek from './CulturalWeek';
+import CulturalWeek from '../Activities/ActivitiesPage';
 import OfficialEvents from './OfficialEvents';
 import Photos from './Photos';
 import { useTranslation } from 'react-i18next';
