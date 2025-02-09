@@ -39,20 +39,10 @@ const Navbar: React.FC = () => {
         {
           label: t("navbar.services_sub.students"),
           path: "/services",
-          submenu: [
-            { label: t("navbar.services_sub.registration"), path: "/registration" },
-            { label: t("navbar.services_sub.diploma"), path: "/diploma-certification" },
-            { label: t("navbar.services_sub.scholarships"), path: "/russian-scholarships" }
-          ],
         },
         {
           label: t("navbar.services_sub.study_in_russia"),
           path: "/study-in-russia",
-          submenu: [
-            { label: t("navbar.services_sub.universities"), path: "/accredited-universities" },
-            { label: t("navbar.services_sub.useful_sites"), path: "/useful-sites" },
-            { label: t("navbar.services_sub.statistics"), path: "/student-statistics" }
-          ],
         },
         { label: t("navbar.services_sub.regulations"), path: "/regulations" },
       ],
@@ -63,8 +53,9 @@ const Navbar: React.FC = () => {
       title: t("navbar.activities"),
       path: "/activities",
       submenu: [
-        { label: t("navbar.activities_sub.events"), path: "/events" },
+        { label: t("navbar.activities_sub.events"), path: "/activities" },
         { label: t("navbar.activities_sub.cultural"), path: "/cultural-events" },
+        { label: t("navbar.activities_sub.magazine"), path: "/magazine" },
       ],
     },
     {

@@ -11,7 +11,7 @@
       "subtitle": "الملحقية الثقافية اليمنية - موسكو"
     },
     "about_sub": {
-      "overview": "نظرة عامة",
+      "overview": "نبذة عن الملحقية",
       "advisor": "المستشار الثقافي"
     },
     "services_sub": {
@@ -27,7 +27,9 @@
     },
     "activities_sub": {
       "events": "الأنشطة",
-      "cultural": "الفعاليات الثقافية"
+      "cultural": "الفعاليات الثقافية",
+      "magazine": "المجلة الثقافية"
+
     },
     "announcements_sub": {
       "office": "تعميمات الملحقية",

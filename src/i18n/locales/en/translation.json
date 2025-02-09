@@ -27,7 +27,8 @@
     },
     "activities_sub": {
       "events": "Activities",
-      "cultural": "Cultural Events"
+      "cultural": "Cultural Events",
+      "magazine": "Cultural Magazine"
     },
     "announcements_sub": {
       "office": "Attaché Circulars",

@@ -27,7 +27,8 @@
     },
     "activities_sub": {
       "events": "Мероприятия",
-      "cultural": "Культурные события"
+      "cultural": "Культурные события",
+      "magazine": "Культурный журнал"
     },
     "announcements_sub": {
       "office": "Циркуляры атташé",
