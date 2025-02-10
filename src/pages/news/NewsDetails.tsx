@@ -40,7 +40,8 @@ const NewsDetails: React.FC = () => {
 				/>
 				<p>{formatDate(data.date)}</p>
 				<h1 className="text-3xl font-extrabold text-gray-900 mb-4">{data.title}</h1>
-				<p className="text-gray-700 leading-loose whitespace-pre-line break-words">{data.description}</p>
+				<div className="border p-4 rounded-lg shadow-md" dangerouslySetInnerHTML={{ __html: data.description }} />
+				{/* <p className="text-gray-700 leading-loose whitespace-pre-line break-words">{data.description}</p> */}
 			</main>
 
 			{/* Related News Section */}

@@ -2,7 +2,7 @@ import React from "react";
 // import NewsList from "./NewsList";
 import useNews from "../../api/useNews";
 import { Link } from "react-router-dom";
-import { formatDate, shortenString, sortByDate } from "../../utils";
+import { formatDate, sortByDate } from "../../utils";
 import { IMAGES_URL } from "../../api/myAxios";
 
 const NewsPage: React.FC = () => {
@@ -56,7 +56,7 @@ function News() {
 									{news.title}
 								</h3>
 								{/* News Description */}
-								<p className="text-gray-600 mt-2">{shortenString(news.description)}</p>
+								{/* <p className="text-gray-600 mt-2">{shortenString(news.description)}</p> */}
 							</div>
 						</Link>
 					</div>

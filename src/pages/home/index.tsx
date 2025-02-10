@@ -6,8 +6,9 @@ import NewsList from "../news/NewsList";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import myAxios from "../../api/myAxios";
-import { shortenString } from "../../utils";
+// import { shortenString } from "../../utils";
 import { BackgroundGradient } from "../../components/background-gradient";
+import { formatDate } from "../../utils";
 // import useNews from "../../api/useNews";
 // import { getDataByLastDays, shortenString } from "../../utils";
 
@@ -116,6 +117,7 @@ interface NewsItem {
   createdAt?: string;
   updatedAt?: string;
   isImportant?: boolean;
+  date:string;
 }
 
 const ImportantNewsCard = () => {
@@ -148,7 +150,8 @@ const ImportantNewsCard = () => {
                       <h3 className="text-xl font-semibold text-gray-900 hover:text-red-600 transition-colors">
                         {news.title}
                       </h3>
-                      <p className="text-gray-600 mt-2">{shortenString(news.description)}</p>
+                      {/* <p className="text-gray-600 mt-2">{shortenString(news.description)}</p> */}
+                      <p>{formatDate(news.date)}</p>
                     </div>
                   </Link>
                 </div>

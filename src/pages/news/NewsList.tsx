@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import useNews from "../../api/useNews";
-import { formatDate, shortenString } from "../../utils";
+import { formatDate } from "../../utils";
 import { IMAGES_URL } from "../../api/myAxios";
 import { sortByDate } from "../../utils";
 
@@ -40,7 +40,7 @@ const NewsList: React.FC = () => {
 									{news.title}
 								</h3>
 								{/* News Description */}
-								<p className="text-gray-600 mt-2">{shortenString(news.description)}</p>
+								{/* <p className="text-gray-600 mt-2">{shortenString(news.description)}</p> */}
 								<p>{formatDate(news.date)}</p>
 							</div>
 						</Link>
