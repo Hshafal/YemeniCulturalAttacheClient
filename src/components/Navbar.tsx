@@ -66,10 +66,10 @@ const Navbar: React.FC = () => {
       label: t("navbar.announcements"),
       title: t("navbar.announcements"),
       path: "/announcements",
-      submenu: [
-        { label: t("navbar.announcements_sub.office"), path: "/office-circulars" },
-        { label: t("navbar.announcements_sub.ministry"), path: "/ministry-circulars" },
-      ],
+      // submenu: [
+      //   { label: t("navbar.announcements_sub.office"), path: "/office-circulars" },
+      //   { label: t("navbar.announcements_sub.ministry"), path: "/ministry-circulars" },
+      // ],
     },
     {
       id: 6,
