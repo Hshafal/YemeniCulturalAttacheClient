@@ -44,7 +44,10 @@ const Navbar: React.FC = () => {
           label: t("navbar.services_sub.study_in_russia"),
           path: "/study-in-russia",
         },
-        { label: t("navbar.services_sub.regulations"), path: "/regulations" },
+        {
+          label: t("navbar.services_sub.regulations"),
+          path: "/regulations"
+        },
       ],
     },
     {

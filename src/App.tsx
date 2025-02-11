@@ -22,6 +22,7 @@ import CulturalMagazine from './pages/CulturalMagazine/CulturalMagazine'
 
 import myAxios from "./api/myAxios";
 import ActivityPage from "./pages/Activities/ActivitiesPage";
+import StudyInRussiaPage from "./pages/studyInRussia/index";
 
 
 function App() {
@@ -80,6 +81,7 @@ function App() {
           {/* services */}
           <Route path="/services" element={<OnlineServices />} />
           <Route path="/regulations" element={<LawsAndRegulations />} />
+          <Route path="/study-in-russia" element={<StudyInRussiaPage />} />
 
           <Route path="/activities" element={<Activities />} />
           <Route path="/activity/:id" element={<ActivityPage />} />
