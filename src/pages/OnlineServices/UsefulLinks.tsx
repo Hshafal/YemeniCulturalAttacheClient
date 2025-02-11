@@ -31,25 +31,25 @@ const UsefulLinks = () => {
         </li>
         <li>
           <a
-            href="/منح_الجامعات_الروسية.pdf"
+            href="/scholership.pdf"
             download
             className="hover:underline hover:text-blue-300"
           >
             منح من الجامعة نفسها ( اولمبياد جامعية داخلية لطلاب الاجانب)
           </a>
         </li>
-        <li>
-          <span>
-            كيفية التقديم على هذه المنح
-          </span>
-          <a
-            href="https://youtube.com/@yemeniculturalattache-moscow?si=juCYyUeTtSIXybEi"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline hover:text-blue-300 px-2"
-          > أضغط هنا</a>
-        </li>
       </ul>
+      <p className="text-black text-lg py-4">
+        <span>
+          كيفية التقديم على هذه المنح
+        </span>
+        <a
+          href="https://youtube.com/@yemeniculturalattache-moscow?si=juCYyUeTtSIXybEi"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:underline hover:text-blue-300 px-2 text-bold text-blue-500"
+        > أضغط هنا</a>
+      </p>
     </div>
   );
 };
