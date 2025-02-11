@@ -13,9 +13,9 @@ const OnlineServices = () => {
       {/* Navbar */}
       <nav className="mb-6">
         <ul className="flex gap-6">
-          <li><a href="#diploma-attestation" className="text-blue-500">تصديق الشهادات</a></li>
-          <li><a href="#useful-links" className="text-blue-500">روابط مفيدة</a></li>
-          <li><a href="#laws-regulations" className="text-blue-500">القوانين واللوائح</a></li>
+          <li><a href="#registration" className="text-blue-500">التسجيل في الملحقية </a></li>
+          <li><a href="#diploma-attestation" className="text-blue-500">تصديق الوثائق</a></li>
+          <li><a href="#useful-links" className="text-blue-500"> المنح الروسية</a></li>
         </ul>
       </nav>
 
