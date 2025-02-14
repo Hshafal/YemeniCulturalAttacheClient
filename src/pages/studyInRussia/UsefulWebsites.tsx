@@ -12,7 +12,7 @@ const AdditionalResources = () => {
         <ul className="list-disc list-inside text-blue-400 space-y-2">
           <li>
             <a
-              href="http://mohe-ye.org"
+              href="http://www.moheye.net"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline hover:text-blue-300"
