@@ -36,21 +36,21 @@ const VisitorStats: React.FC = () => {
 			<div className="flex justify-between">
 				<h2 className="text-md font-semibold text-center ">إحصائيات الزوار</h2>
 				<div className="text-right flex">
-					<p className="text-gray-600">اليوم الماضي:</p>
+					<p className="text-gray-600">أمس:</p>
 					<p className="text-lg font-bold text-center">{visitCounts.day}</p>
 				</div>
 				<div className="text-right flex">
-					<p className="text-gray-600">الشهر الماضي:</p>
+					<p className="text-gray-600"> هذا الشهر:</p>
 					<p className="text-lg font-bold text-center">{visitCounts.month}</p>
 				</div>
 				{/* <div className="text-right">
 					<p className="text-gray-600">العام الماضي:</p>
 					<p className="text-lg font-bold">{visitCounts.year}</p>
-				</div>
+				</div> */}
 				<div className="text-right">
 					<p className="text-gray-600">إجمالي عدد الزيارات:</p>
 					<p className="text-lg font-bold">{visitCounts.total}</p>
-				</div> */}
+				</div>
 			</div>
 		</div>
 	);
