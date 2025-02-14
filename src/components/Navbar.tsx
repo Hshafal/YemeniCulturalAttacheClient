@@ -141,9 +141,9 @@ const Navbar: React.FC = () => {
 			className="sticky md:relative top-0 z-10 bg-cover bg-center max-w-7xl px-4 md:px-5 lg:px-5 mx-auto bg-white"
 		>
 			<div className="flex flex-col justify-center items-center pt-5">
-				<img src="/Yemen.png" alt="Logo" className="md:h-12 h-8 w-auto" />
+				<img src="/Yemen.png" alt="Logo" className="h-10 w-auto" />
 				<div className="flex justify-between md:justify-center gap-8 items-center px-4 py-3 md:py-4 md:px-6">
-					<img src="/android-chrome-192x192.png" alt="Logo" className="md:h-12 h-8 w-auto" />
+					<img src="/android-chrome-192x192.png" alt="Logo" className="h-16 w-auto" />
 
 					<div className="hidden md:block">
 						<div className="text-center flex flex-col items-center">
