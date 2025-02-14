@@ -47,8 +47,8 @@ const VisitorStats: React.FC = () => {
 					<p className="text-gray-600">العام الماضي:</p>
 					<p className="text-lg font-bold">{visitCounts.year}</p>
 				</div> */}
-				<div className="text-right">
-					<p className="text-gray-600">إجمالي عدد الزيارات:</p>
+				<div className="text-right flex">
+					<p className="text-gray-600">إجمالي الزيارات:</p>
 					<p className="text-lg font-bold">{visitCounts.total}</p>
 				</div>
 			</div>
