@@ -22,8 +22,8 @@ const NewsPage: React.FC = () => {
 };
 
 function News() {
-	const { getQuery } = useNews();
-	const { data, isLoading } = getQuery;
+	const { getNews } = useNews();
+	const { data, isLoading } = getNews;
 
 	if (isLoading) {
 		return <h1>Loading...</h1>;

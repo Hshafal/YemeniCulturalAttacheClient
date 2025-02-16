@@ -51,8 +51,8 @@ const NewsDetails: React.FC = () => {
 };
 
 function RelatedNews() {
-	const { getQuery } = useNews();
-	const { data: allNews, isLoading, isError } = getQuery;
+	const { getNews } = useNews();
+	const { data: allNews, isLoading, isError } = getNews;
 	if (isLoading) {
 		return <h1>Loading...</h1>;
 	}

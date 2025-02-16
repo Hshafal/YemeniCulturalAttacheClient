@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 interface CardProps {
-  id: string;
+  id?: string;
   title: string;
   imageSrc: string;
   imageAlt: string;

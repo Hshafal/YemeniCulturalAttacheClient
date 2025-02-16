@@ -32,9 +32,14 @@ export function formatDate(isoDate: string | undefined): string {
     return date.toLocaleDateString('ru-RU', options);
 }
 
+export function getImageURL(url: string | undefined) {
+	return url ? `${IMAGES_URL}/${url}` : "/news/news3.jpg";
+}
+
 import { ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { News } from "./types";
+import { IMAGES_URL } from "./api/myAxios";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));

@@ -1,36 +1,30 @@
 import React from "react";
 import Card from "./ActivityCard";
-
-const activitiesData = [
-  {
-    id: "1",
-    title: "إنشاء بصمة الإصبع لموظفي الملحقية الثقافية اليمنية في موسكو",
-    imageSrc: "/activities/article1.jpg",
-    imageAlt: "موظفو الملحقية الثقافية اليمنية في موسكو",
-  },
-  {
-    id: "2",
-    title: "دورة تدريبية لموظفي الملحقية الثقافية اليمنية في موسكو حول استخدام \"جوجل فورم\"",
-    imageSrc: "/activities/training1.jpeg",
-    imageAlt: "دورة تدريبية حول استخدام جوجل فورم",
-  },
-  // Add more news data as needed
-];
+import useNews from "../../api/useNews";
+import { getImageURL } from "../../utils";
 
 const ActivityList: React.FC = () => {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-      {activitiesData.map((newsItem) => (
-        <Card
-          key={newsItem.id}
-          id={newsItem.id}
-          title={newsItem.title}
-          imageSrc={newsItem.imageSrc}
-          imageAlt={newsItem.imageAlt}
-        />
-      ))}
-    </div>
-  );
+	const { getActivities } = useNews();
+	const { data, isLoading, isError } = getActivities;
+
+	if (isLoading) return <h1>Loading...</h1>;
+	if (isError) return <h1>Server error</h1>;
+	if (data?.length === 0) return <h1>لا توجد انشطة حاليا</h1>;
+
+	return (
+		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+			{data &&
+				data.map((newsItem) => (
+					<Card
+						key={newsItem._id}
+						id={newsItem._id}
+						title={newsItem.title}
+						imageSrc={getImageURL(newsItem.thumbnail)}
+						imageAlt={newsItem.title}
+					/>
+				))}
+		</div>
+	);
 };
 
 export default ActivityList;

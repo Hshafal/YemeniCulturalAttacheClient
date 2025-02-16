@@ -1,16 +1,26 @@
-import { toast } from "react-toastify";
 import { News } from "../types";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import myAxios from "./myAxios";
 import { useParams } from "react-router-dom";
 
 export const fetchNews = async (): Promise<News[]> => {
-	const response = await myAxios.get("/news");
+	const response = await myAxios.get("/news/only-news");
 	return response.data;
 };
-
-export const createNews = async (news: Omit<News, "id">): Promise<News> => {
-	const response = await myAxios.post("/news", news);
+export const fetchAds = async (): Promise<News[]> => {
+	const response = await myAxios.get("/news/ads");
+	return response.data;
+};
+export const fetchNotifications = async (): Promise<News[]> => {
+	const response = await myAxios.get("/news/notifications");
+	return response.data;
+};
+export const fetchActivities = async (): Promise<News[]> => {
+	const response = await myAxios.get("/news/activities");
+	return response.data;
+};
+export const fetchEvents = async (): Promise<News[]> => {
+	const response = await myAxios.get("/news/events");
 	return response.data;
 };
 
@@ -19,70 +29,44 @@ export const getNewsById = async (id: string | undefined) => {
 	return response.data;
 };
 
-export const updateNews = async (news: News): Promise<News> => {
-	const response = await myAxios.put(`/news/${news._id}`, news);
-	return response.data;
-};
-
-export const deleteNews = async (_id: string | undefined): Promise<void> => {
-	await myAxios.delete(`/news/${_id}`);
-};
-
 export default function useNews() {
-	const queryClient = useQueryClient();
-
-	const getQuery = useQuery({
-		queryKey: ["news"],
+	const getNews = useQuery({
+		queryKey: ["news", "only-news"],
 		queryFn: fetchNews,
 	});
 
-	const createMutation = useMutation({
-		mutationFn: createNews,
-		onSuccess: () => {
-			queryClient.invalidateQueries({ queryKey: ["news"] });
-			toast.success("تم اضافة الخبر بنجاح");
-		},
-		onError: (error) => {
-			console.log(error);
-			toast.error("فشل في اضافة الخبر");
-		},
+	const getAds = useQuery({
+		queryKey: ["news", "ads"],
+		queryFn: fetchAds,
+	});
+
+	const getNotifications = useQuery({
+		queryKey: ["news", "notifications"],
+		queryFn: fetchNotifications,
+	});
+
+	const getActivities = useQuery({
+		queryKey: ["news", "activities"],
+		queryFn: fetchActivities,
+	});
+
+	const getEvents = useQuery({
+		queryKey: ["news", "events"],
+		queryFn: fetchActivities,
 	});
 
 	const { id } = useParams();
 	const getByIdQuery = useQuery({
-		queryKey: ["news"],
+		queryKey: ["news", id],
 		queryFn: () => getNewsById(id),
 	});
 
-	const updateMutation = useMutation({
-		mutationFn: updateNews,
-		onSuccess: () => {
-			queryClient.invalidateQueries({ queryKey: ["news"] });
-			toast.success("تم تحديث الخبر بنجاح");
-		},
-		onError: (error) => {
-			console.log(error);
-			toast.error("فشل في تحديث الخبر");
-		},
-	});
-
-	const deleteMutation = useMutation({
-		mutationFn: deleteNews,
-		onSuccess: () => {
-			queryClient.invalidateQueries({ queryKey: ["news"] });
-			toast.success("تم حذف الخبر بنجاح");
-		},
-		onError: (error) => {
-			console.log(error);
-			toast.error("فشل في حذف الخبر");
-		},
-	});
-
 	return {
-		getQuery,
+		getNews,
+		getAds,
+		getNotifications,
+		getActivities,
+		getEvents,
 		getByIdQuery,
-		createMutation,
-		updateMutation,
-		deleteMutation,
 	};
 }
