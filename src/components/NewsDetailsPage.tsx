@@ -30,14 +30,13 @@ const CategoryPage: React.FC = () => {
 				<title>{title}</title>
 				<meta name="description" content={description} />
 			</Helmet>
-			<h1 className="text-2xl font-bold mb-2">{title}</h1>
-			<div className="border p-4 rounded-lg shadow-md" dangerouslySetInnerHTML={{ __html: description }} />
-
 			<img
 				src={thumbnail ? `${IMAGES_URL}/${thumbnail}` : "/news/news3.jpg"}
 				alt={title}
-				className="mb-4 rounded-lg shadow-md"
+				className="rounded-lg mb-6 w-full h-80 object-cover shadow-md"
 			/>
+			<h1 className="text-2xl font-bold mb-2">{title}</h1>
+			<div className="border p-4 rounded-lg shadow-md" dangerouslySetInnerHTML={{ __html: description }} />
 
 			{images && images.length > 0 && (
 				<div className="grid grid-cols-2 gap-4 mb-4">
