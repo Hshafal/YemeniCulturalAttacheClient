@@ -21,7 +21,6 @@ import CulturalMagazine from './pages/CulturalMagazine/CulturalMagazine'
 
 
 import myAxios from "./api/myAxios";
-import ActivityPage from "./pages/Activities/ActivitiesPage";
 import StudyInRussiaPage from "./pages/studyInRussia/index";
 
 import CategoryPage from "./components/NewsDetailsPage";
