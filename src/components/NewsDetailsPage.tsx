@@ -25,37 +25,39 @@ const CategoryPage: React.FC = () => {
 	const { title, description, thumbnail, images, isImportant, category, date } = news;
 
 	return (
-		<div className="flex flex-col items-center p-4 bg-gray-100 text-right" dir="rtl">
-			<Helmet>
-				<title>{title}</title>
-				<meta name="description" content={description} />
-			</Helmet>
-			<img
-				src={thumbnail ? `${IMAGES_URL}/${thumbnail}` : "/news/news3.jpg"}
-				alt={title}
-				className="rounded-lg mb-6 w-full h-80 object-cover shadow-md"
-			/>
-			<h1 className="text-2xl font-bold mb-2">{title}</h1>
-			<div className="border p-4 rounded-lg shadow-md" dangerouslySetInnerHTML={{ __html: description }} />
+		<div className="w-full flex justify-center items-center">
+			<div className="flex max-w-4xl flex-col items-center p-4 bg-gray-100 text-right" dir="rtl">
+				<Helmet>
+					<title>{title}</title>
+					<meta name="description" content={description} />
+				</Helmet>
+				<img
+					src={thumbnail ? `${IMAGES_URL}/${thumbnail}` : "/news/news3.jpg"}
+					alt={title}
+					className="rounded-lg mb-6 w-full h-80 object-cover shadow-md"
+				/>
+				<h1 className="text-2xl font-bold mb-2">{title}</h1>
+				<div className="border p-4 rounded-lg shadow-md" dangerouslySetInnerHTML={{ __html: description }} />
 
-			{images && images.length > 0 && (
-				<div className="grid grid-cols-2 gap-4 mb-4">
-					{images.map((image: string, index: number) => (
-						<img
-							key={image}
-							src={`${IMAGES_URL}/${image}`}
-							alt={`${title}-${index}`}
-							className="rounded-lg shadow-md"
-						/>
-					))}
+				{images && images.length > 0 && (
+					<div className="grid grid-cols-2 gap-4 mb-4">
+						{images.map((image: string, index: number) => (
+							<img
+								key={image}
+								src={`${IMAGES_URL}/${image}`}
+								alt={`${title}-${index}`}
+								className="rounded-lg shadow-md"
+							/>
+						))}
+					</div>
+				)}
+
+				<div className="flex flex-col items-end">
+					<span className={`px-2 py-1 rounded ${isImportant ? "bg-red-500 text-white" : "bg-gray-200 text-gray-700"}`}>
+						{isImportant ? "مهم" : category}
+					</span>
+					<span className="text-gray-500 text-sm mt-2">{new Date(date).toLocaleDateString("ru-RU")}</span>
 				</div>
-			)}
-
-			<div className="flex flex-col items-end">
-				<span className={`px-2 py-1 rounded ${isImportant ? "bg-red-500 text-white" : "bg-gray-200 text-gray-700"}`}>
-					{isImportant ? "مهم" : category}
-				</span>
-				<span className="text-gray-500 text-sm mt-2">{new Date(date).toLocaleDateString("ru-RU")}</span>
 			</div>
 		</div>
 	);
