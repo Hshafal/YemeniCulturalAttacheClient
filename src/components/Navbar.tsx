@@ -141,7 +141,6 @@ const Navbar: React.FC = () => {
 			className="sticky md:relative top-0 z-10 bg-cover bg-center max-w-7xl px-4 md:px-5 lg:px-5 mx-auto bg-white"
 		>
 			<div className="flex flex-col justify-center items-center pt-5">
-				<img src="/Yemen.png" alt="Logo" className="h-10 w-auto" />
 				<div className="flex justify-between md:justify-center gap-8 items-center px-4 py-3 md:py-4 md:px-6">
 					<img src="/android-chrome-192x192.png" alt="Logo" className="h-16 w-auto" />
 
@@ -158,53 +157,61 @@ const Navbar: React.FC = () => {
 
 					<div className="block md:hidden text-black text-center text-md font-black">{t("navbar.logo.subtitle")}</div>
 
-					<div className="flex items-center space-x-4 relative">
-						<button
-							title="language name"
-							onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
-							className="text-red-600 text-lg flex items-center justify-center relative"
-						>
-							<span className={`flag-icon ${currentFlag} text-xl`}></span>
-						</button>
-
-						{isLanguageMenuOpen && (
-							<div className="absolute right-6 md:right-0 top-full w-28 bg-white rounded-md shadow-lg z-20">
-								{languages.map((lang) => (
-									<button
-										key={lang.code}
-										onClick={() => changeLanguage(lang.code)}
-										className="block w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-red-200"
-									>
-										{lang.name}
-									</button>
-								))}
-							</div>
-						)}
-
-						<button
-							title="menu"
-							className="md:hidden text-black focus:outline-none"
-							onClick={() => setIsMenuOpen(!isMenuOpen)}
-						>
-							<svg
-								className="h-6 w-6"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
+					<div className="flex flex-col items-center">
+						<div className="flex items-center space-x-4 relative">
+							<button
+								title="language name"
+								onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
+								className="text-red-600 text-lg flex items-center justify-center relative"
 							>
-								{isMenuOpen ? (
-									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-								) : (
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										strokeWidth="2"
-										d="M4 6h16M4 12h16m-7 6h7"
-									/>
-								)}
-							</svg>
-						</button>
+								<span className={`flag-icon ${currentFlag} text-xl`}></span>
+							</button>
+
+							{isLanguageMenuOpen && (
+								<div className="absolute right-6 md:right-0 top-full w-28 bg-white rounded-md shadow-lg z-20">
+									{languages.map((lang) => (
+										<button
+											key={lang.code}
+											onClick={() => changeLanguage(lang.code)}
+											className="block w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-red-200"
+										>
+											{lang.name}
+										</button>
+									))}
+								</div>
+							)}
+
+							<button
+								title="menu"
+								className="md:hidden text-black focus:outline-none"
+								onClick={() => setIsMenuOpen(!isMenuOpen)}
+							>
+								<svg
+									className="h-6 w-6"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									{isMenuOpen ? (
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth="2"
+											d="M6 18L18 6M6 6l12 12"
+										/>
+									) : (
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth="2"
+											d="M4 6h16M4 12h16m-7 6h7"
+										/>
+									)}
+								</svg>
+							</button>
+						</div>
+						<img src="/Yemen.png" alt="Logo" className="h-10 w-auto" />
 					</div>
 				</div>
 			</div>

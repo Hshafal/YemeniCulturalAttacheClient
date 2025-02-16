@@ -2,6 +2,7 @@ import React from "react";
 import Card from "./ActivityCard";
 import useNews from "../../api/useNews";
 import { getImageURL } from "../../utils";
+import { sortByDate } from "../../utils";
 
 const ActivityList: React.FC = () => {
 	const { getActivities } = useNews();
@@ -14,7 +15,7 @@ const ActivityList: React.FC = () => {
 	return (
 		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
 			{data &&
-				data.map((newsItem) => (
+				sortByDate(data).map((newsItem) => (
 					<Card
 						key={newsItem._id}
 						id={newsItem._id}
