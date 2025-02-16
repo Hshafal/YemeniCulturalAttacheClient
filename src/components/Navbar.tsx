@@ -157,8 +157,10 @@ const Navbar: React.FC = () => {
 
 					<div className="block md:hidden text-black text-center text-md font-black">{t("navbar.logo.subtitle")}</div>
 
-					<div className="flex flex-col items-center">
-						<div className="flex items-center space-x-4 relative">
+					<div className="flex items-center">
+						<img src="/Yemen.png" alt="Logo" className="h-14 w-auto" />
+
+						<div className="flex flex-col items-end justify-end 	  relative">
 							<button
 								title="language name"
 								onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
@@ -211,7 +213,6 @@ const Navbar: React.FC = () => {
 								</svg>
 							</button>
 						</div>
-						<img src="/Yemen.png" alt="Logo" className="h-10 w-auto" />
 					</div>
 				</div>
 			</div>
