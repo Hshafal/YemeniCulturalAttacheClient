@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
   const [selectedTitle, setSelectedTitle] = useState(t("navbar.home"))
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false)
-  const [currentFlag, setCurrentFlag] = useState("")
+//   const [currentFlag, setCurrentFlag] = useState("")
   const [openSubmenu, setOpenSubmenu] = useState<number | null>(null)
   const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null)
 
@@ -88,16 +88,16 @@ const Navbar: React.FC = () => {
   const changeLanguage = (languageCode: string) => {
     i18n.changeLanguage(languageCode)
     localStorage.setItem("selectedLanguage", languageCode)
-    const selectedFlag = languages.find((lang) => lang.code === languageCode)?.flag || ""
-    setCurrentFlag(selectedFlag)
+    // const selectedFlag = languages.find((lang) => lang.code === languageCode)?.flag || ""
+    // setCurrentFlag(selectedFlag)
     setIsLanguageMenuOpen(false)
   }
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem("selectedLanguage") || i18n.language || "en"
     i18n.changeLanguage(savedLanguage)
-    const initialFlag = languages.find((lang) => lang.code === savedLanguage)?.flag || "flag-icon-gb"
-    setCurrentFlag(initialFlag)
+    // const initialFlag = languages.find((lang) => lang.code === savedLanguage)?.flag || "flag-icon-gb"
+    // setCurrentFlag(initialFlag)
   }, [i18n])
 
   const handleSubmenuToggle = (id: number) => {
@@ -161,13 +161,13 @@ const Navbar: React.FC = () => {
 						<img src="/Yemen.png" alt="Logo" className="h-14 w-auto" />
 
 						<div className="flex flex-col items-end justify-end 	  relative">
-							<button
+							{/* <button
 								title="language name"
 								onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
 								className="text-red-600 text-lg flex items-center justify-center relative"
 							>
 								<span className={`flag-icon ${currentFlag} text-xl`}></span>
-							</button>
+							</button> */}
 
 							{isLanguageMenuOpen && (
 								<div className="absolute right-6 md:right-0 top-full w-28 bg-white rounded-md shadow-lg z-20">
