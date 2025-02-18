@@ -45,6 +45,13 @@ const CollapsibleComponent: React.FC = () => {
 			</div>
 			<div className="mt-4 space-y-2">
 				<a
+					href="/announcement.pdf"
+					download
+					className="text-blue-400 hover:underline hover:text-blue-300 block"
+				>
+					أعلان عن تدشين الموقع الالكتروني للملحقية الثقافية اليمنية -موسكو
+				</a>
+				<a
 					href="/اعلان_لطلاب_غير_قادرين_العودة_لبلد_الدراسة_2024.pdf"
 					download
 					className="text-blue-400 hover:underline hover:text-blue-300 block"
