@@ -94,7 +94,8 @@ const Navbar: React.FC = () => {
   }
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem("selectedLanguage") || i18n.language || "en"
+    // const savedLanguage = localStorage.getItem("selectedLanguage") || i18n.language || "en"
+    const savedLanguage = "ar"
     i18n.changeLanguage(savedLanguage)
     // const initialFlag = languages.find((lang) => lang.code === savedLanguage)?.flag || "flag-icon-gb"
     // setCurrentFlag(initialFlag)
