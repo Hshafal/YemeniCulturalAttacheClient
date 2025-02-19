@@ -9,14 +9,24 @@ const LawsAndRegulations = () => {
         القوانين واللوائح التي يجب على الطلاب معرفتها:
       </p>
       <div className="mt-4 space-y-2">
+        <p>  لوائح و قوانين من إدارة الإبتعاث والمنح الدراسية - وزارة التعليم العالي اليمني </p>
         <a
-          href="/low.pdf"
+          href="/public/قانون_رقم_(19)_لسنة_2003_بشأن_البعثات_والمنح_الدراسية.pdf"
           download
           className="text-blue-400 hover:underline hover:text-blue-300 block"
         >
-          لوائح و قوانين من إدارة الإبتعاث والمنح الدراسية - وزارة التعليم العالي اليمني        </a>
+          قانون رقم (19) لسنة 2003 بشأن البعثات والمنح الدراسية
+        </a>
         <a
-          href="/lowsFornewstudent.pdf"
+          href="/اللائحة_التنفيذية_لقانون_البعثات.pdf"
+          download
+          className="text-blue-400 hover:underline hover:text-blue-300 block"
+        >
+          اللائحة التنفيذية لقانون البعثات
+        </a>
+
+        <a
+          href="/قوانين_لطالب_المتعبث_الجديد.pdf"
           download
           className="text-blue-400 hover:underline hover:text-blue-300 block"
         >
