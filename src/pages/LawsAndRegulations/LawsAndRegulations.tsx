@@ -6,11 +6,11 @@ const LawsAndRegulations = () => {
         <h3 className="text-xl font-bold text-gray-800 mb-4">القوانين واللوائح</h3>
       </div>
       <p className="text-gray-600 leading-relaxed mb-4">
-         القوانين واللوائح التي يجب على الطلاب معرفتها:
+        القوانين واللوائح التي يجب على الطلاب معرفتها:
       </p>
       <div className="mt-4 space-y-2">
         <a
-          href="/lows.pdf"
+          href="/low.pdf"
           download
           className="text-blue-400 hover:underline hover:text-blue-300 block"
         >
