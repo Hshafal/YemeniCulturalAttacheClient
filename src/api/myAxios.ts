@@ -4,7 +4,7 @@ export const BASE_URL = import.meta.env.DEV
   ? "http://localhost:5000/api"
   : "https://f3cea4d78b5e.vps.myjino.ru/api";
 
-export const IMAGES_URL = import.meta.env.DEV
+export const UPLOAD_URL = import.meta.env.DEV
   ? "http://localhost:5000/uploads"
   : "https://f3cea4d78b5e.vps.myjino.ru/uploads";
 

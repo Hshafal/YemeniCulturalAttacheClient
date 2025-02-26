@@ -139,11 +139,11 @@ const Navbar: React.FC = () => {
   return (
 		<div
 			dir="ltr"
-			className="sticky md:relative top-0 z-10 bg-cover bg-center max-w-7xl px-4 md:px-5 lg:px-5 mx-auto bg-white"
+			className="sticky md:relative top-0 z-10 bg-cover bg-center gap-2 max-w-7xl px-4 md:px-5 lg:px-5 mx-auto bg-white"
 		>
 			<div className="flex flex-col justify-center items-center pt-5">
-				<div className="flex justify-between md:justify-center gap-8 items-center px-4 py-3 md:py-4 md:px-6">
-					<img src="/android-chrome-192x192.png" alt="Logo" className="h-16 w-auto" />
+				<div className="flex justify-between md:justify-center items-center px-4 py-3 md:py-4 md:px-6">
+					<img src="/android-chrome-192x192.png" alt="Logo" className="md:h-16 h-10 w-auto" />
 
 					<div className="hidden md:block">
 						<div className="text-center flex flex-col items-center">
@@ -156,10 +156,10 @@ const Navbar: React.FC = () => {
 						</div>
 					</div>
 
-					<div className="block md:hidden text-black text-center text-md font-black">{t("navbar.logo.subtitle")}</div>
+					<div className="block md:hidden text-black px-4 text-center text-md font-black">{t("navbar.logo.subtitle")}</div>
 
 					<div className="flex items-center">
-						<img src="/Yemen.png" alt="Logo" className="h-14 w-auto" />
+						<img src="/Yemen.png" alt="Logo" className="md:h-14 h-10 w-auto" />
 
 						<div className="flex flex-col items-end justify-end 	  relative">
 							{/* <button

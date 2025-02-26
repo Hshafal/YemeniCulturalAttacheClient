@@ -83,7 +83,7 @@ const HomePage: React.FC = () => {
 
       <div className="flex justify-center items-center md:flex-row flex-col-reverse max-w-7xl mx-auto">
 
-        <main className="w-3/4 p-1">
+        <main className="md:w-3/4 w-full p-1">
           <div className="flex gap-3">
             <div className="h-10 w-2 bg-red-500"></div>
             <h1 className="font-bold text-3xl text-right ">{t("news.main_news")}</h1>

@@ -3,57 +3,54 @@ import myAxios from "../api/myAxios";
 
 // Define the interface for the visit counts
 interface VisitCounts {
-	day: number;
-	month: number;
-	year: number;
-	total: number;
+  day: number;
+  month: number;
+  total: number;
 }
 
 const VisitorStats: React.FC = () => {
-	const [visitCounts, setVisitCounts] = useState<VisitCounts | null>(null);
+  const [visitCounts, setVisitCounts] = useState<VisitCounts | null>(null);
 
-	useEffect(() => {
-		// Fetch visit counts from the server
-		const fetchVisitCounts = async () => {
-			try {
-				const res = await myAxios.get("/visitors/visit-counts");
-				const data: VisitCounts = res.data;
-				setVisitCounts(data);
-			} catch (err) {
-				console.log(err);
-			}
-		};
+  useEffect(() => {
+    const fetchVisitCounts = async () => {
+      try {
+        const res = await myAxios.get("/visitors/visit-counts");
+        setVisitCounts(res.data);
+      } catch (err) {
+        console.error("Error fetching visit counts:", err);
+      }
+    };
 
-		fetchVisitCounts();
-	}, []);
+    fetchVisitCounts();
+  }, []);
 
-	if (!visitCounts) {
-		return <div className="text-center py-10">جاري التحميل...</div>;
-	}
+  if (!visitCounts) {
+    return <div className="text-center text-gray-600 py-10">جاري التحميل...</div>;
+  }
 
-	return (
-		<div className="max-w-md mx-auto bg-white shadow-md rounded-lg p-2">
-			<div className="flex justify-between">
-				<h2 className="text-md font-semibold text-center ">إحصائيات الزوار</h2>
-				<div className="text-right flex">
-					<p className="text-gray-600">هذا اليوم:</p>
-					<p className="text-lg font-bold text-center">{visitCounts.day}</p>
-				</div>
-				<div className="text-right flex">
-					<p className="text-gray-600"> هذا الشهر:</p>
-					<p className="text-lg font-bold text-center">{visitCounts.month}</p>
-				</div>
-				{/* <div className="text-right">
-					<p className="text-gray-600">العام الماضي:</p>
-					<p className="text-lg font-bold">{visitCounts.year}</p>
-				</div> */}
-				<div className="text-right flex">
-					<p className="text-gray-600">إجمالي الزيارات:</p>
-					<p className="text-lg font-bold">{visitCounts.total}</p>
-				</div>
-			</div>
-		</div>
-	);
+  return (
+    <section className="p-4">
+      <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg p-4">
+        <h2 className="text-lg font-semibold text-center text-gray-800 mb-3">
+          إحصائيات الزوار
+        </h2>
+        <div className="grid grid-cols-3 gap-4 text-center">
+          <div>
+            <p className="text-gray-600">اليوم</p>
+            <p className="text-lg font-bold">{visitCounts.day}</p>
+          </div>
+          <div>
+            <p className="text-gray-600">الشهر</p>
+            <p className="text-lg font-bold">{visitCounts.month}</p>
+          </div>
+          <div>
+            <p className="text-gray-600">إجمالي الزيارات</p>
+            <p className="text-lg font-bold">{visitCounts.total}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default VisitorStats;

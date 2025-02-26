@@ -79,9 +79,9 @@ const Footer: React.FC = () => {
 			{/* Footer Bottom Section */}
 			<div className="text-center text-gray-600 dark:text-gray-400 mt-4">
 				<div className="text-sm">
+					<VisitorStats />
 					<hr />
 					<p className="p-2">© 2025 - {t("footer.rights_reserved")}</p>
-					<VisitorStats />
 					<p>
 						تم تطوير الموقع بواسطة
 						<span>
