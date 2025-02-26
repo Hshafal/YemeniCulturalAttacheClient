@@ -151,7 +151,7 @@ const Navbar: React.FC = () => {
 								الملحقية الثقافية اليمنية - موسكو
 							</h1>
 							<p className="text-md font-black hidden md:block mt-2 text-slate-600">
-								Йеменское культурное Атташе - Москва
+								Йеменское Культурное Атташе - Москва
 							</p>
 						</div>
 					</div>
