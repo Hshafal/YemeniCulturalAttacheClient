@@ -32,8 +32,8 @@ import { formatDate } from "../../utils";
 
 const CollapsibleComponent: React.FC = () => {
 	const [isOpen, setIsOpen] = useState(false);
-	const { getAnnounceCul } = usePDFs();
-	const { data, isLoading, isError } = getAnnounceCul;
+	const { announceCulQuery } = usePDFs();
+	const { data, isLoading, isError } = announceCulQuery;
 
 	const toggleCollapse = () => {
 		setIsOpen(!isOpen);
