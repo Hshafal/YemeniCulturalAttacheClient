@@ -37,7 +37,7 @@ const TeamHierarchy: React.FC = () => {
     {
       name: t('team.assistant.name'),
       title: t('team.assistant.title'),
-      image: '/person.png',
+      image: '/fuad.png',
       bio: t('team.assistant.bio'),
       cvLink: '/cv.pdf',
     },
