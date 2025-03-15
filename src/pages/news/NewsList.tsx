@@ -4,20 +4,50 @@ import useNews from "../../api/useNews";
 import { formatDate } from "../../utils";
 import { UPLOAD_URL } from "../../api/myAxios";
 import { sortByDate } from "../../utils";
+import Loading from "../../components/Loading";
+import { useTranslation } from "react-i18next";
+
+// Define the NewsItem interface (if not already defined)
+interface NewsItem {
+  _id: string;
+  title: string;
+  titleArabic?: string;
+  titleEnglish?: string;
+  titleRussian?: string;
+  description: string;
+  date: string;
+  thumbnail?: string;
+}
 
 const NewsList: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const { getNews } = useNews();
   const { data, isLoading } = getNews;
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return <Loading />;
   }
 
   if (!data) {
-    return <h1>There are no news to view</h1>;
+    return <h1>{t("no_news")}</h1>;
   }
 
   const limitedNews = sortByDate(data).slice(0, 3);
+
+  // Function to get the title based on the current language
+  const getTitle = (news: NewsItem) => {
+    const currentLanguage = i18n.language;
+    switch (currentLanguage) {
+      case "ar":
+        return news.titleArabic || news.title;
+      case "en":
+        return news.titleEnglish || news.title;
+      case "ru":
+        return news.titleRussian || news.title;
+      default:
+        return news.title;
+    }
+  };
 
   return (
     <section className="flex items-center justify-center min-h-auto py-12 px-4 ">
@@ -31,16 +61,15 @@ const NewsList: React.FC = () => {
               {/* News Image */}
               <img
                 src={news.thumbnail ? `${UPLOAD_URL}/${news.thumbnail}` : "/news/news3.jpg"}
-                alt={news.title}
+                alt={getTitle(news)}
                 className="rounded-t-lg w-full h-48 object-cover"
               />
               <div className="p-4">
                 {/* News Title */}
-                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-red-600 transition-colors">
-                  {news.title}
+                <h3 className="text-md   font-semibold text-gray-900 group-hover:text-red-600 transition-colors">
+                  {getTitle(news)}
                 </h3>
-                {/* News Description */}
-                {/* <p className="text-gray-600 mt-2">{shortenString(news.description)}</p> */}
+                {/* News Date */}
                 <p>{formatDate(news.date)}</p>
               </div>
             </Link>

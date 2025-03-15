@@ -4,8 +4,8 @@ import LanguageDetector from "i18next-browser-languagedetector";
 
 // Import translation files
 import translationAR from "./locales/ar/translation.json";
-// import translationEN from "./locales/en/translation.json";
-// import translationRU from "./locales/ru/translation.json";
+import translationEN from "./locales/en/translation.json";
+import translationRU from "./locales/ru/translation.json";
 
 // Initialize i18n
 i18n
@@ -14,23 +14,23 @@ i18n
   .init({
     resources: {
       ar: { translation: translationAR },
-      // en: { translation: translationEN },
-      // ru: { translation: translationRU },
+      en: { translation: translationEN },
+      ru: { translation: translationRU },
     },
     fallbackLng: "ar",
     debug: true,
-    // detection: {
-    //   // Language detection options
-    //   order: [
-    //     "localStorage",
-    //     "cookie",
-    //     "navigator",
-    //     "htmlTag",
-    //     "path",
-    //     "subdomain",
-    //   ],
-    //   caches: ["localStorage", "cookie"],
-    // },
+    detection: {
+      // Language detection options
+      order: [
+        "localStorage",
+        "cookie",
+        "navigator",
+        "htmlTag",
+        "path",
+        "subdomain",
+      ],
+      caches: ["localStorage", "cookie"],
+    },
     interpolation: {
       escapeValue: false,
     },

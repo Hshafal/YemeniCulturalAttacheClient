@@ -1,28 +1,29 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { FaArrowUp } from "react-icons/fa";
+import myAxios from "./api/myAxios";
+
+// Components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Loading from "./components/Loading";
+import SetDirection from "./components/SetDirection";
+import LanguageSelector from "./components/LanguageSelector";
+
+// Pages
 import Home from "./pages/home";
 import Almoulhaqia from "./pages/almoulhaqia";
 import Activities from "./pages/Activities";
-import Loading from "./components/Loading";
 import OnlineServices from "./pages/OnlineServices/OnlineServices";
 import AnnouncementsAndNotifications from "./pages/addsAndNotifications/Index";
-import { FaArrowUp } from "react-icons/fa";
 import Contact from "./components/Contact";
-import SetDirection from "./components/SetDirection";
 import NewsPage from "./pages/news/NewsPage";
 import NewsDetails from "./pages/news/NewsDetails";
 import LawsAndRegulations from "./pages/LawsAndRegulations/LawsAndRegulations";
-
 import Speech from "./pages/almoulhaqia/Speach";
 import Events from "./pages/events/index";
-import CulturalMagazine from './pages/CulturalMagazine/CulturalMagazine'
-
-
-import myAxios from "./api/myAxios";
+import CulturalMagazine from "./pages/CulturalMagazine/CulturalMagazine";
 import StudyInRussiaPage from "./pages/studyInRussia/index";
-
 import CategoryPage from "./components/NewsDetailsPage";
 
 function App() {
@@ -30,26 +31,19 @@ function App() {
 	const [showScrollButton, setShowScrollButton] = useState(false);
 
 	useEffect(() => {
-		// Simulate loading time (e.g., API calls, fetching resources, etc.)
 		const timer = setTimeout(() => setLoading(false), 1000);
 		return () => clearTimeout(timer);
 	}, []);
 
-	// Show the scroll-to-top button when user scrolls down
 	useEffect(() => {
 		const handleScroll = () => {
-			if (window.pageYOffset > 300) {
-				setShowScrollButton(true);
-			} else {
-				setShowScrollButton(false);
-			}
+			setShowScrollButton(window.pageYOffset > 300);
 		};
 
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
-	// Make a request to the backend to log the visit
 	useEffect(() => {
 		myAxios
 			.get("/visitors/log")
@@ -57,7 +51,6 @@ function App() {
 			.catch((error) => console.error("Error logging visit", error));
 	}, []);
 
-	// Function to scroll back to top
 	const scrollToTop = () => {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	};
@@ -67,39 +60,31 @@ function App() {
 	}
 
 	return (
-		<div>
-			<Router>
-				<SetDirection />
-				<Navbar />
-				<Routes>
-					{/* home */}
-					<Route path="/" element={<Home />} />
-					{/* almoulhaqia */}
-					<Route path="/almoulhaqia" element={<Almoulhaqia />} />
-					<Route path="/speech" element={<Speech />} />
+		<Router>
+			<SetDirection />
+			<Navbar />
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/almoulhaqia" element={<Almoulhaqia />} />
+				<Route path="/speech" element={<Speech />} />
+				<Route path="/services" element={<OnlineServices />} />
+				<Route path="/regulations" element={<LawsAndRegulations />} />
+				<Route path="/study-in-russia" element={<StudyInRussiaPage />} />
+				<Route path="/activities" element={<Activities />} />
+				<Route path="/activity/:id" element={<CategoryPage />} />
+				<Route path="/cultural-events" element={<Events />} />
+				<Route path="/magazine" element={<CulturalMagazine />} />
+				<Route path="/news" element={<NewsPage />} />
+				<Route path="/news/:id" element={<NewsDetails />} />
+				<Route path="/announcements" element={<AnnouncementsAndNotifications />} />
+				<Route path="/contact" element={<Contact />} />
+			</Routes>
+			<Footer />
 
-					{/* services */}
-					<Route path="/services" element={<OnlineServices />} />
-					<Route path="/regulations" element={<LawsAndRegulations />} />
-					<Route path="/study-in-russia" element={<StudyInRussiaPage />} />
+			{/* Floating Language Selector */}
+			<LanguageSelector />
 
-					<Route path="/activities" element={<Activities />} />
-					<Route path="/activity/:id" element={<CategoryPage />} />
-
-					<Route path="/cultural-events" element={<Events />} />
-					<Route path="/magazine" element={<CulturalMagazine />} />
-
-					{/* news */}
-					<Route path="/news" element={<NewsPage />} />
-					<Route path="/news/:id" element={<NewsDetails />} />
-
-					<Route path="/announcements" element={<AnnouncementsAndNotifications />} />
-					<Route path="/contact" element={<Contact />} />
-				</Routes>
-				<Footer />
-			</Router>
-
-			{/* Scroll-to-top button */}
+			{/* Scroll-to-top Button */}
 			{showScrollButton && (
 				<button
 					onClick={scrollToTop}
@@ -109,7 +94,8 @@ function App() {
 					<FaArrowUp size={20} />
 				</button>
 			)}
-		</div>
+		</Router>
 	);
 }
+
 export default App;
