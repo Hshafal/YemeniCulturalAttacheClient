@@ -28,7 +28,7 @@ const Card: React.FC<CardProps> = ({ id, title, imageSrc, imageAlt }) => {
             : currentLanguage === "ru"
               ? "Читать далее"
               : "Read more"}
-
+  
         </Link>
       </div>
     </div>
