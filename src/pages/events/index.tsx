@@ -113,7 +113,7 @@ export default function Page() {
   ];
 
   return (
-		<div className="min-h-auto py-12 px-4 sm:px-6 lg:px-8 text-black w-full max-w-6xl mx-auto">
+		<div className="min-h-auto py-12 px-4 sm:px-6 lg:px-8 text-black w-full max-w-7xl mx-auto">
 			<div className="flex flex-col md:flex-wrap md:flex-row justify-center gap-2 items-start">
 				<ImageSlider
 					images={images}
