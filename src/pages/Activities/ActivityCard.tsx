@@ -12,17 +12,23 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ id, title, imageSrc, imageAlt }) => {
   const { i18n } = useTranslation();
   const currentLanguage = i18n.language;
-
-  // Determine text direction based on the current language
   const textDirection = currentLanguage === "ar" ? "rtl" : "ltr";
 
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg" dir={textDirection}>
-      <img src={imageSrc} alt={imageAlt} className="w-full" />
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{title}</div>
-        <Link to={`/activity/${id}`} className="text-blue-600 hover:underline">
-          {currentLanguage === "ar" ? "اقرأ المزيد" : "Read more"}
+    <div
+      className="w-full max-w-sm flex flex-col rounded-lg overflow-hidden shadow-lg bg-white"
+      dir={textDirection}
+    >
+      <img src={imageSrc} alt={imageAlt} className="w-full h-48 object-cover" />
+      <div className="p-4 flex flex-col flex-grow">
+        <div className="font-bold text-lg mb-2 flex-grow">{title}</div>
+        <Link to={`/activity/${id}`} className="text-blue-600 hover:underline self-start">
+          {currentLanguage === "ar"
+            ? "اقرأ المزيد"
+            : currentLanguage === "ru"
+              ? "Читать далее"
+              : "Read more"}
+
         </Link>
       </div>
     </div>

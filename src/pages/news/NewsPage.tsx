@@ -1,37 +1,71 @@
 import React from "react";
-// import NewsList from "./NewsList";
 import useNews from "../../api/useNews";
 import { Link } from "react-router-dom";
 import { formatDate, sortByDate } from "../../utils";
 import { UPLOAD_URL } from "../../api/myAxios";
+import { useTranslation } from "react-i18next";
+import Loading from "../../components/Loading";
+
+interface News {
+  _id: string;
+  title: string;
+  titleArabic?: string;
+  titleEnglish?: string;
+  titleRussian?: string;
+  thumbnail?: string;
+  date: string;
+}
 
 const NewsPage: React.FC = () => {
+  const { i18n, t } = useTranslation();
+  const currentLanguage = i18n.language;
+  const textDirection = currentLanguage === "ar" ? "rtl" : "ltr";
+
   return (
-    <div className="min-h-screen bg-gray-50" dir="rtl">
+    <div className="min-h-screen bg-gray-50" dir={textDirection}>
       <header className="bg-white shadow-md sticky top-0 z-10">
         <div className="p-4 max-w-7xl mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gray-900">الأخبار</h1>
+          <h1 className="text-2xl font-bold text-gray-900">
+          {t("news.main_news")}
+          </h1>
         </div>
       </header>
-
       <main>
-        <News />
+        <News currentLanguage={currentLanguage} />
       </main>
     </div>
   );
 };
 
-function News() {
+interface NewsProps {
+  currentLanguage: string;
+}
+
+function News({ currentLanguage }: NewsProps) {
   const { getNews } = useNews();
   const { data, isLoading } = getNews;
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return <Loading />
   }
 
   if (!data) {
     return <h1>There are no news to view</h1>;
   }
+
+  // Function to get localized title
+  const getTitle = (news: News) => {
+    switch (currentLanguage) {
+      case "ar":
+        return news.titleArabic || news.title;
+      case "en":
+        return news.titleEnglish || news.title;
+      case "ru":
+        return news.titleRussian || news.title;
+      default:
+        return news.title;
+    }
+  };
 
   return (
     <section className="flex items-center justify-center min-h-auto py-12 px-4">
@@ -45,18 +79,15 @@ function News() {
               {/* News Image */}
               <img
                 src={news.thumbnail ? `${UPLOAD_URL}/${news.thumbnail}` : "/news/news3.jpg"}
-                alt={news.title}
+                alt={getTitle(news)}
                 className="rounded-t-lg w-full h-48 object-cover"
               />
-              <p>{formatDate(news.date)}</p>
-
+              <p className="px-2">{formatDate(news.date)}</p>
               <div className="p-4">
                 {/* News Title */}
-                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-red-600 transition-colors">
-                  {news.title}
+                <h3 className="text-md font-semibold text-gray-900 group-hover:text-red-600 transition-colors">
+                  {getTitle(news)}
                 </h3>
-                {/* News Description */}
-                {/* <p className="text-gray-600 mt-2">{shortenString(news.description)}</p> */}
               </div>
             </Link>
           </div>
