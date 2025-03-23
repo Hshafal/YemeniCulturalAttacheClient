@@ -91,32 +91,40 @@ const ImportantNewsCard: React.FC = () => {
   }
 
   return (
-    <BackgroundGradient className="rounded-[22px] bg-white dark:bg-zinc-900">
-      <div>
-        <div className="bg-white rounded-[22px] border shadow-sm hover:shadow-md transition-shadow duration-200 p-4">
-          <h1 className="font-bold text-3xl text-center p-5 text-red-600 flashing">هـــــام</h1>
-          {data &&
-            data.map((news) => (
-              <div key={news._id} className="border border-black rounded-md my-2">
-                <Link to={`/news/${news._id}`} className="group">
-                  <div className="p-4">
-                    <h3 className="text-md font-semibold text-gray-900 hover:text-red-600 transition-colors">
-                      {currentLanguage === "ar"
-                        ? news.titleArabic || news.title
-                        : currentLanguage === "en"
-                          ? news.titleEnglish || news.title
-                          : currentLanguage === "ru"
-                            ? news.titleRussian || news.title
-                            : news.title}
-                    </h3>
-                    <p className="text-gray-600">{formatDate(news.date)}</p>
-                  </div>
-                </Link>
-              </div>
-            ))}
-        </div>
-      </div>
-    </BackgroundGradient>
+		<BackgroundGradient className="rounded-[22px] bg-white dark:bg-zinc-900">
+			<div>
+				<div className="bg-white rounded-[22px] border shadow-sm hover:shadow-md transition-shadow duration-200 p-4">
+					<h1 className="font-bold text-3xl text-center p-5 text-red-600 flashing">
+						{currentLanguage === "ar"
+							? "هــــــام"
+							: currentLanguage === "en"
+							? "Important"
+							: currentLanguage === "ru"
+							? "Важно"
+							: "هــــــام"}
+					</h1>
+					{data &&
+						data.map((news) => (
+							<div key={news._id} className="border border-black rounded-md my-2">
+								<Link to={`/news/${news._id}`} className="group">
+									<div className="p-4">
+										<h3 className="text-md font-semibold text-gray-900 hover:text-red-600 transition-colors">
+											{currentLanguage === "ar"
+												? news.titleArabic || news.title
+												: currentLanguage === "en"
+												? news.titleEnglish || news.title
+												: currentLanguage === "ru"
+												? news.titleRussian || news.title
+												: news.title}
+										</h3>
+										<p className="text-gray-600">{formatDate(news.date)}</p>
+									</div>
+								</Link>
+							</div>
+						))}
+				</div>
+			</div>
+		</BackgroundGradient>
   );
 };
 
