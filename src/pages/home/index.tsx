@@ -94,7 +94,7 @@ const ImportantNewsCard: React.FC = () => {
     <BackgroundGradient className="rounded-[22px] bg-white dark:bg-zinc-900">
       <div>
         <div className="bg-white rounded-[22px] border shadow-sm hover:shadow-md transition-shadow duration-200 p-4">
-          <h1 className="font-bold text-3xl text-center p-5 text-red-600">هـــــام</h1>
+          <h1 className="font-bold text-3xl text-center p-5 text-red-600 flashing">هـــــام</h1>
           {data &&
             data.map((news) => (
               <div key={news._id} className="border border-black rounded-md my-2">
