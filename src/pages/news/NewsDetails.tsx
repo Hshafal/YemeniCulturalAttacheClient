@@ -37,7 +37,7 @@ const NewsDetails: React.FC = () => {
 
   if (isLoading) return <Loading />;
   if (isError || !data) return <h1 className="text-xl text-red-500 text-center">Server error</h1>;
-
+ 
   const title =
     currentLanguage === "ar"
       ? data.titleArabic || data.title

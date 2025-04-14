@@ -52,7 +52,7 @@ export default function useNews() {
 
 	const getEvents = useQuery({
 		queryKey: ["news", "events"],
-		queryFn: fetchActivities,
+		queryFn: fetchEvents,
 	});
 
 	const { id } = useParams();
