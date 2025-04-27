@@ -108,7 +108,7 @@ const ImportantNewsCard: React.FC = () => {
 							<div key={news._id} className="border border-black rounded-md my-2">
 								<Link to={`/news/${news._id}`} className="group">
 									<div className="p-4">
-										<h3 className="text-md font-semibold text-gray-900 hover:text-red-600 transition-colors">
+										<h3 className="text-md font-semibold text-gray-900 hover:text-red-600 transition-colors flashing">
 											{currentLanguage === "ar"
 												? news.titleArabic || news.title
 												: currentLanguage === "en"

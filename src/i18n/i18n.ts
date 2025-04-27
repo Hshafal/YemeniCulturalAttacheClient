@@ -17,7 +17,8 @@ i18n
       en: { translation: translationEN },
       ru: { translation: translationRU },
     },
-    fallbackLng: "ar",
+    fallbackLng: "en",
+    lng: "en",
     debug: true,
     detection: {
       // Language detection options

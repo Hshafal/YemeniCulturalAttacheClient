@@ -2,6 +2,7 @@
   "navbar": {
     "home": "Home",
     "about": "About the Attaché",
+    "cultural": "About the Attaché",
     "services": "E-Services",
     "activities": "Activities & Events",
     "announcements": "Announcements & Notifications",
@@ -13,6 +14,10 @@
     "about_sub": {
       "overview": "Overview",
       "advisor": "Cultural Advisor"
+    },
+    "cultural_sub": {
+      "yemen": " Yemen",
+      "russian": "Russia "
     },
     "services_sub": {
       "students": "Student Services",

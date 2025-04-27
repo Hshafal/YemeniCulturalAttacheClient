@@ -71,8 +71,18 @@ const Navbar: React.FC = () => {
       //   { label: t("navbar.announcements_sub.ministry"), path: "/ministry-circulars" },
       // ],
     },
+    // {
+    //   id: 6,
+    //   label: t("navbar.cultural"),
+    //   title: t("navbar.cultural"),
+    //   path: "/cultural",
+    //   submenu: [
+    //     { label: t("navbar.cultural_sub.yemen"), path: "/cultural-yemen" },
+    //     { label: t("navbar.cultural_sub.russian"), path: "/cultural-russain" },
+    //   ],
+    // },
     {
-      id: 6,
+      id: 7,
       label: t("navbar.contact"),
       title: t("navbar.contact"),
       path: "/contact",
@@ -236,8 +246,8 @@ const Navbar: React.FC = () => {
                   <Link
                     to={item.path}
                     className={`flex-grow block px-4 py-2 md:px-3 md:py-2 text-sm font-black md:text-base md:rounded-md ${selectedTitle === item.title
-                        ? "bg-red-500 text-white"
-                        : "bg-white text-gray-700 md:border md:border-gray-300 hover:bg-red-500 hover:text-white"
+                      ? "bg-red-500 text-white"
+                      : "bg-white text-gray-700 md:border md:border-gray-300 hover:bg-red-500 hover:text-white"
                       }`}
                     onClick={(e) => handleMenuItemClick(e, item)}
                   >
@@ -258,8 +268,8 @@ const Navbar: React.FC = () => {
                 {item.submenu && openSubmenu === item.id && (
                   <div
                     className={`w-full md:absolute md:left-0 md:top-full md:w-48 bg-white ${window.innerWidth < 768
-                        ? ""
-                        : "mt-0 rounded-md shadow-lg ring-1 ring-black ring-opacity-5"
+                      ? ""
+                      : "mt-0 rounded-md shadow-lg ring-1 ring-black ring-opacity-5"
                       }`}
                     onMouseEnter={() => {
                       if (closeTimeout) {

@@ -2,6 +2,7 @@
   "navbar": {
     "home": "الرئيسية",
     "about": "عن الملحقية",
+    "cultural": "الثفافة",
     "services": "الخدمات الإلكترونية",
     "activities": "الأنشطة والفعاليات",
     "announcements": "الإعلانات والإشعارات",
@@ -13,6 +14,10 @@
     "about_sub": {
       "overview": "نبذة عن الملحقية",
       "advisor": "المستشار الثقافي"
+    },
+    "cultural_sub": {
+      "yemen": " اليمن",
+      "russian": "روسيا "
     },
     "services_sub": {
       "students": "خدمات الطلاب",
@@ -29,7 +34,6 @@
       "events": "الأنشطة",
       "cultural": "الفعاليات الثقافية",
       "magazine": "المجلة الثقافية"
-
     },
     "announcements_sub": {
       "office": "تعميمات الملحقية",

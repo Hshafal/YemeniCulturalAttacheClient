@@ -1,8 +1,9 @@
 {
   "navbar": {
     "home": "Главная",
-    "about": "О культурном атташе",
-    "services": "Электронные услуги",
+    "about": "О атташе",
+    "cultural": "Культура",
+    "services": "Эл. услуги",
     "activities": "Мероприятия и события",
     "announcements": "Объявления и уведомления",
     "contact": "Свяжитесь с нами",
@@ -13,6 +14,10 @@
     "about_sub": {
       "overview": "Общий обзор",
       "advisor": "Культурный советник"
+    },
+    "cultural_sub": {
+      "yemen": " Йемен",
+      "russian": "Россия "
     },
     "services_sub": {
       "students": "Услуги для студентов",
