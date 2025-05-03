@@ -26,6 +26,7 @@ import CulturalMagazine from "./pages/CulturalMagazine/CulturalMagazine";
 import StudyInRussiaPage from "./pages/studyInRussia/index";
 import CategoryPage from "./components/NewsDetailsPage";
 import AdDetails from "./pages/addsAndNotifications/AdDetails";
+import ActivityDetails from "./pages/events/ActivityDetails";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -73,6 +74,7 @@ function App() {
         <Route path="/study-in-russia" element={<StudyInRussiaPage />} />
         <Route path="/activities" element={<Activities />} />
         <Route path="/activity/:id" element={<CategoryPage />} />
+        <Route path="/activities/:id" element={<ActivityDetails />} />
         <Route path="/cultural-events" element={<Events />} />
         <Route path="/magazine" element={<CulturalMagazine />} />
         <Route path="/news" element={<NewsPage />} />
