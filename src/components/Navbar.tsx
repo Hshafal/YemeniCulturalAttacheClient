@@ -30,26 +30,30 @@ const Navbar: React.FC = () => {
         { label: t("navbar.about_sub.advisor"), path: "/speech" },
       ],
     },
-    {
-      id: 3,
-      label: t("navbar.services"),
-      title: t("navbar.services"),
-      path: "/services",
-      submenu: [
+    ...(i18n.language === "ar"
+      ? [
         {
-          label: t("navbar.services_sub.students"),
+          id: 3,
+          label: t("navbar.services"),
+          title: t("navbar.services"),
           path: "/services",
+          submenu: [
+            {
+              label: t("navbar.services_sub.students"),
+              path: "/services",
+            },
+            {
+              label: t("navbar.services_sub.study_in_russia"),
+              path: "/study-in-russia",
+            },
+            {
+              label: t("navbar.services_sub.regulations"),
+              path: "/regulations",
+            },
+          ],
         },
-        {
-          label: t("navbar.services_sub.study_in_russia"),
-          path: "/study-in-russia",
-        },
-        {
-          label: t("navbar.services_sub.regulations"),
-          path: "/regulations"
-        },
-      ],
-    },
+      ]
+      : []),
     {
       id: 4,
       label: t("navbar.activities"),
