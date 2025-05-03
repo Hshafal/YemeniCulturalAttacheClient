@@ -25,77 +25,80 @@ import Events from "./pages/events/index";
 import CulturalMagazine from "./pages/CulturalMagazine/CulturalMagazine";
 import StudyInRussiaPage from "./pages/studyInRussia/index";
 import CategoryPage from "./components/NewsDetailsPage";
+import AdDetails from "./pages/addsAndNotifications/AdDetails";
 
 function App() {
-	const [loading, setLoading] = useState(true);
-	const [showScrollButton, setShowScrollButton] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [showScrollButton, setShowScrollButton] = useState(false);
 
-	useEffect(() => {
-		const timer = setTimeout(() => setLoading(false), 1000);
-		return () => clearTimeout(timer);
-	}, []);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
-	useEffect(() => {
-		const handleScroll = () => {
-			setShowScrollButton(window.pageYOffset > 300);
-		};
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollButton(window.pageYOffset > 300);
+    };
 
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-	useEffect(() => {
-		myAxios
-			.get("/visitors/log")
-			.then((response) => console.log("Visit logged", response.data))
-			.catch((error) => console.error("Error logging visit", error));
-	}, []);
+  useEffect(() => {
+    myAxios
+      .get("/visitors/log")
+      .then((response) => console.log("Visit logged", response.data))
+      .catch((error) => console.error("Error logging visit", error));
+  }, []);
 
-	const scrollToTop = () => {
-		window.scrollTo({ top: 0, behavior: "smooth" });
-	};
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
-	if (loading) {
-		return <Loading />;
-	}
+  if (loading) {
+    return <Loading />;
+  }
 
-	return (
-		<Router>
-			<SetDirection />
-			<Navbar />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/almoulhaqia" element={<Almoulhaqia />} />
-				<Route path="/speech" element={<Speech />} />
-				<Route path="/services" element={<OnlineServices />} />
-				<Route path="/regulations" element={<LawsAndRegulations />} />
-				<Route path="/study-in-russia" element={<StudyInRussiaPage />} />
-				<Route path="/activities" element={<Activities />} />
-				<Route path="/activity/:id" element={<CategoryPage />} />
-				<Route path="/cultural-events" element={<Events />} />
-				<Route path="/magazine" element={<CulturalMagazine />} />
-				<Route path="/news" element={<NewsPage />} />
-				<Route path="/news/:id" element={<NewsDetails />} />
-				<Route path="/announcements" element={<AnnouncementsAndNotifications />} />
-				<Route path="/contact" element={<Contact />} />
-			</Routes>
-			<Footer />
+  return (
+    <Router>
+      <SetDirection />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/almoulhaqia" element={<Almoulhaqia />} />
+        <Route path="/speech" element={<Speech />} />
+        <Route path="/services" element={<OnlineServices />} />
+        <Route path="/regulations" element={<LawsAndRegulations />} />
+        <Route path="/study-in-russia" element={<StudyInRussiaPage />} />
+        <Route path="/activities" element={<Activities />} />
+        <Route path="/activity/:id" element={<CategoryPage />} />
+        <Route path="/cultural-events" element={<Events />} />
+        <Route path="/magazine" element={<CulturalMagazine />} />
+        <Route path="/news" element={<NewsPage />} />
+        <Route path="/news/:id" element={<NewsDetails />} />
+        <Route path="/announcements" element={<AnnouncementsAndNotifications />} />
+        <Route path="/ads/:id" element={<AdDetails />} />
 
-			{/* Floating Language Selector */}
-			<LanguageSelector />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
 
-			{/* Scroll-to-top Button */}
-			{showScrollButton && (
-				<button
-					onClick={scrollToTop}
-					className="fixed bottom-4 right-4 bg-red-500 text-white p-3 rounded-full shadow-lg hover:bg-red-700 focus:outline-none"
-					aria-label="Scroll to top"
-				>
-					<FaArrowUp size={20} />
-				</button>
-			)}
-		</Router>
-	);
+      {/* Floating Language Selector */}
+      <LanguageSelector />
+
+      {/* Scroll-to-top Button */}
+      {showScrollButton && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-4 right-4 bg-red-500 text-white p-3 rounded-full shadow-lg hover:bg-red-700 focus:outline-none"
+          aria-label="Scroll to top"
+        >
+          <FaArrowUp size={20} />
+        </button>
+      )}
+    </Router>
+  );
 }
 
 export default App;
