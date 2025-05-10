@@ -30,6 +30,9 @@ import ActivityDetails from "./pages/events/ActivityDetails";
 import YemenCultural from "./pages/cultural/cultural-yemen/index"
 import YemenHistory from "./pages/cultural/cultural-yemen/yemen-history"
 import YemenFood from "./pages/cultural/cultural-yemen/yemen-food"
+import YemenGeography from "./pages/cultural/cultural-yemen/yemen-gegraphy"
+import ClothingPage from "./pages/cultural/cultural-yemen/yemen-clothing"
+import FolkArtsPage from "./pages/cultural/cultural-yemen/folks-arts";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -83,6 +86,9 @@ function App() {
 
         <Route path="/cultural-yemen" element={<YemenCultural />} />
         <Route path="/yemeni-food" element={<YemenFood />} />
+        <Route path="/yemen-geography" element={<YemenGeography />} />
+        <Route path="/yemeni-clothing" element={<ClothingPage />} />
+        <Route path="/yemeni-dance" element={<FolkArtsPage />} />
 
 
         <Route path="/magazine" element={<CulturalMagazine />} />
