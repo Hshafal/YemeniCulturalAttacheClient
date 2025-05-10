@@ -26,7 +26,7 @@ const YemenCulturePage = () => {
     { id: "history", image: "https://cdn.britannica.com/49/10549-004-84634252/Palace-sultan-Saywun-Yemen.jpg", link: "/yemen-history" },
     { id: "geography", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Yemen_topography.png/800px-Yemen_topography.png", link: "/yemen-geography" },
     { id: "food", image: "https://cdn.al-ain.com/images/2021/12/05/90-140302-yemeni-cuisine_700x400.jpeg", link: "/yemeni-food" },
-    { id: "clothing", image: "https://www.aljazeera.net/wp-content/uploads/2022/11/7-3.jpg?w=770&resize=770%2C513", link: "/yemeni-clothing" },
+    { id: "clothing", image: "https://images.alwatanvoice.com/news/large/9998447170.jpg", link: "/yemeni-clothing" },
     { id: "dance", image: "https://arabic.cnn.com/sites/default/files/styles/full_card_image/public/2022/06/23/images/307098.jpg", link: "/yemeni-dance" },
     { id: "music", image: "https://www.aljazeera.net/wp-content/uploads/2023/05/GettyImages-579245902.jpg", link: "/yemeni-music" },
   ];
