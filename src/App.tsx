@@ -27,6 +27,9 @@ import StudyInRussiaPage from "./pages/studyInRussia/index";
 import CategoryPage from "./components/NewsDetailsPage";
 import AdDetails from "./pages/addsAndNotifications/AdDetails";
 import ActivityDetails from "./pages/events/ActivityDetails";
+import YemenCultural from "./pages/cultural/cultural-yemen/index"
+import YemenHistory from "./pages/cultural/cultural-yemen/yemen-history"
+import YemenFood from "./pages/cultural/cultural-yemen/yemen-food"
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -36,6 +39,7 @@ function App() {
     const timer = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -76,11 +80,18 @@ function App() {
         <Route path="/activity/:id" element={<CategoryPage />} />
         <Route path="/activities/:id" element={<ActivityDetails />} />
         <Route path="/cultural-events" element={<Events />} />
+
+        <Route path="/cultural-yemen" element={<YemenCultural />} />
+        <Route path="/yemeni-food" element={<YemenFood />} />
+
+
         <Route path="/magazine" element={<CulturalMagazine />} />
         <Route path="/news" element={<NewsPage />} />
         <Route path="/news/:id" element={<NewsDetails />} />
         <Route path="/announcements" element={<AnnouncementsAndNotifications />} />
         <Route path="/ads/:id" element={<AdDetails />} />
+        <Route path="/yemen-history" element={<YemenHistory />} />
+
 
         <Route path="/contact" element={<Contact />} />
       </Routes>

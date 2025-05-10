@@ -2,7 +2,7 @@
   "navbar": {
     "home": "Home",
     "about": "About the Attaché",
-    "cultural": "About the Attaché",
+    "cultural": "Cultural",
     "services": "E-Services",
     "activities": "Activities & Events",
     "announcements": "Announcements & Notifications",
@@ -237,5 +237,61 @@
   "imageGallery": {
     "title": "Images",
     "description": "Gallery of the Cultural Attaché's activities."
-  }
+  },
+  "culture": {
+    "sections": {
+      "history": {
+        "title": "Ancient History of Yemen",
+        "description": "Yemen is one of the oldest centers of civilization in the world. Great kingdoms such as Saba, Himyar, and Ma'in arose here, known for their achievements in trade, architecture, and irrigation. Yemen's location on the Incense Route played a crucial role in connecting it with civilizations like India, Persia, and ancient Rome, making it a flourishing cultural hub through the ages."
+      },
+      "geography": {
+        "title": "Geography of Yemen",
+        "description": "Yemen features a vast geographic diversity that includes towering mountains in the north, coastal plains along the Red Sea, expansive plateaus, and tranquil deserts in the east. This diversity creates stunning natural scenery and varied environments that influence agriculture and cultural practices across regions."
+      },
+      "food": {
+        "title": "Traditional Yemeni Cuisine",
+        "description": "Yemeni cuisine is one of the richest in the Arab world, full of authentic flavors and natural ingredients. It is famous for dishes like mandi, cooked over charcoal; spicy zurbian rice; and hot saltah topped with fenugreek. Recipes vary by region, reflecting Yemen’s cultural and ecological diversity."
+      },
+      "clothing": {
+        "title": "Traditional Yemeni Clothing",
+        "description": "Traditional Yemeni clothing is known for its authenticity and regional diversity. Men often wear a futa or thobe along with the jambiya dagger as a symbol of pride and honor, while women wear embroidered dresses and silver jewelry. These garments are worn during celebrations and weddings to express cultural identity."
+      },
+      "dance": {
+        "title": "Folk Arts and Yemeni Dance",
+        "description": "Folk arts are a vital part of Yemeni culture, especially dances like the 'baraa', performed by men with synchronized steps symbolizing strength and unity. These performances take place at weddings and festivals, accompanied by drums and flutes that create a festive and communal atmosphere."
+      },
+      "music": {
+        "title": "Yemeni Music",
+        "description": "Yemeni music holds a rich heritage of rhythms and scales dating back thousands of years. Traditional instruments such as the qanbus and oud are commonly used. Melodies vary across coastal, mountainous, and desert regions, highlighting the depth and emotional expression in Yemeni musical traditions."
+      },
+      "readMore": "Read more"
+    }
+  },
+  "historyPage": {
+    "heroTitle": "The Ancient History of Yemen",
+    "sections": {
+      "ancient": {
+        "title": "Ancient Civilizations of Yemen",
+        "descriptionParagraphs": [
+          "An exciting journey through the ancient history of happy Yemen since the Stone Age.",
+          "Archaeological discoveries and surveys in Yemen have proven human settlement in this part of the Arab world during the early Stone Age (Lower Paleolithic), more than 250,000 years ago. Early stone tools and their forms indicate human connections between this corner of the Arabian Peninsula and the original human homelands in East Africa via land bridges at the Bab al-Mandab area. Ancient Yemen continued to develop its stone tools, including hand axes made from stone cores, which later evolved into scrapers, knives, and arrowheads during the later stages of the Paleolithic and early Neolithic periods. However, the Neolithic civilization in Yemen did not develop as early as it did in Mesopotamia and the Levant, where the first signs of agriculture and domestication appeared more than 10,000 years ago. In Yemen, these developments were delayed until the early third millennium BCE, and the establishment of early farming villages and irrigation projects did not occur until the late second millennium BCE, as seen in the site of Hajar bin Humaid in Wadi Bayhan, near the city of Timna, the capital of the ancient Kingdom of Qataban.",
+          "Researchers agree that the emergence of ancient Yemeni civilization began in the second half of the second millennium BCE. One of its most prominent features was large-scale irrigation projects, which became the hallmark of South Arabian civilization. The earliest agricultural settlements were concentrated on the edges of major valleys, especially Wadi Bayhan and Wadi Hadhramaut. The efforts to control and maintain water resources led to the development of social, religious, and political organizations.",
+          "As a result of these developments and due to economic needs, local leaderships and small sheikhdoms formed within clusters of villages relying on specific water sources. Shared agricultural interests and trade exchanges led to collective relations, which evolved into religious-secular authorities led by 'Makrab' (plural: 'Makareba', meaning high priest). These roles resembled the dual religious and temporal authority of rulers (En or Ensi) in ancient Mesopotamia before kingship emerged in the early third millennium BCE. With vast profits from the trade of incense and perfumes reaching ancient capitals like Mesopotamia, the Levant, Egypt, and Greece, the Makrab’s status transformed from high priest to king with absolute worldly power, also overseeing religious affairs—similar to rulers in many ancient civilizations. This marked the emergence of grand kingdoms in Yemen, the most notable being six major states that lasted around 1,500 years. These states appeared at different times, coexisted, merged, and eventually formed one unified central Yemeni state. This kingdom extended westward in the south, along the Gulf of Aden and the coast of Hadhramaut in the south, and northward to Najran and the edges of the Empty Quarter (al-Dahma). Yemeni influence, including settlements and trade stations, spread far beyond these borders, with Yemenis extending their language and script to Abyssinia, Somalia, and northward to cities and oases in the Hijaz region.",
+          "To provide further historical context, it’s useful to summarize the six main Yemeni states. The earliest and most famous was the Kingdom of Saba, which emerged in the 10th century BCE and declined in the 3rd century CE. Its first capital was Sirwah, later replaced by Ma’rib—still visible today near the famous Ma’rib Dam, built in the 7th century BCE. Hadhramaut also rose to power in the 10th century BCE and declined in the 3rd century CE. It was one of Yemen’s strongest kingdoms, experiencing great prosperity and leaving behind rich archaeological remains in Shabwah and Hadhramaut. Initially, its capital was Mayfa’a, later replaced by Shabwah, which became a center of commerce. The famous city of Dhofar, known for producing frankincense and myrrh, enhanced Hadhramaut’s economic stature. Multiple ports like Qana and Sumhuram supported trade. In 210 CE, Hadhramaut annexed Qataban, which itself had emerged in the 8th century BCE in the fertile Bayhan valley with its capital at Timna (now Hajar Kahlān in Shabwah). After being destroyed by Hadhramaut forces, the capital moved to Hajar bin Humaid in Bayhan.",
+          "The Kingdom of Awsan flourished with its own vibrant trade like other contemporary Yemeni kingdoms. It left behind significant legal and archaeological evidence, such as a notable legal document written in Musnad script known as the commercial law. Qataban ceased to exist as a political entity in 210 CE after a devastating war with Hadhramaut. The Kingdom of Ma'in (or Minaeans) appeared in the 8th century BCE in the Al-Jawf region with its capital at Qarnawu. Notable cities included Nashan, Nashq, and Najran. Ma'in was among the most famous Yemeni kingdoms due to its prominent trade role with the outside world. Minaean inscriptions have been found in Delos (Greece), Egypt, and Dedan (modern-day Al-Ula), highlighting its role as a caravan stop along the trade routes between Yemen and the Mediterranean.",
+          "Ma'in disappeared from the political scene in the 2nd century BCE after being annexed by Saba. In the 7th century BCE, the Kingdom of Awsan rose as one of Yemen’s most powerful kingdoms. However, it didn’t last long; a coalition of Saba, Hadhramaut, and Qataban ended its independence in 410 BCE, destroying most of its cities. The exact location of its capital remains uncertain but is likely near present-day Hajar al-Nab. At its peak, Awsan controlled Yemen’s two major ports—Aden and Qana—and parts of the territories belonging to Qataban and Saba. Many of its artifacts are now on display in the National Museum in Aden.",
+          "In the 3rd century CE, the Himyarite tribe, led by Yasser Yahnam and later his son Shammar Yuhar’ish, unified Yemen under one central state known in inscriptions as the Kingdom of Saba, Dhu Raydan, Hadhramaut, and Yamnat, with Dhofar as its capital. In the 5th century CE, under King As'ad al-Kamil, the kingdom expanded northward into the central Arabian Peninsula. It became known as the Kingdom of Saba, Dhu Raydan, Hadhramaut, Yamnat, and their Bedouins in the mountains and lowlands. In the early 6th century CE, the kingdom weakened due to successive foreign invasions—especially by the Axumite Ethiopians, who launched campaigns in 516 and 525 CE, eventually occupying Yemen. Yemeni resistance was led by Dhu Nuwas, who heroically fought but died in battle in 525 CE. The Ethiopian occupation continued until 578 CE, during which several uprisings occurred, the most notable being the revolution of Sayf ibn Dhi Yazan. This ended the Ethiopian occupation, only for the Sassanid Persians to take over in 598 CE. Their rule continued until Yemen’s liberation with the advent of Islam at the end of the Prophet Muhammad’s life."
+        ],
+        "videoTitle": "Ancient Civilizations of Yemen"
+      },
+      "modern": {
+        "title": "Modern Yemen",
+        "description": "In the modern era, Yemen entered a complex phase of political and social transformation. Northern Yemen remained under Ottoman control until the early 20th century, while the southern regions were under British occupation until independence in 1967. This was followed by the formation of two separate republics in the north and south, which later unified in 1990 into the Republic of Yemen. Since then, the country has witnessed significant political developments including uprisings, civil wars, and regional and international interventions that have deeply affected social and economic stability. Despite these challenges, the Yemeni people continue to preserve their identity and rich history while striving for a better future.",
+        "videoTitle": "Modern Yemen"
+      }
+    },
+    "footer": "Yemen is not just a country — it is a legacy and civilization worth pride and knowledge."
+  },
+  "readMore": "Read more",
+  "readLess": "Read less"
 }
