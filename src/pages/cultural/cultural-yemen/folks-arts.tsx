@@ -31,7 +31,7 @@ interface ArtItem {
   }
 }
 
-function extractYouTubeId(url) {
+function extractYouTubeId(url: string): string | null {
   const match = url.match(/(?:youtube\.com.*[?&]v=|youtu\.be\/)([^&]+)/)
   return match ? match[1] : null
 }
