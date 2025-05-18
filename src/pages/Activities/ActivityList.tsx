@@ -38,14 +38,14 @@ const ActivityList: React.FC = () => {
           ? activity.titleRussian || activity.title
           : activity.title;
 
-  const getDescription = (activity: Activity): string =>
-    lang === "ar"
-      ? activity.descriptionArabic || activity.description || ""
-      : lang === "en"
-        ? activity.descriptionEnglish || activity.description || ""
-        : lang === "ru"
-          ? activity.descriptionRussian || activity.description || ""
-          : activity.description || "";
+  // const getDescription = (activity: Activity): string =>
+  //   lang === "ar"
+  //     ? activity.descriptionArabic || activity.description || ""
+  //     : lang === "en"
+  //       ? activity.descriptionEnglish || activity.description || ""
+  //       : lang === "ru"
+  //         ? activity.descriptionRussian || activity.description || ""
+  //         : activity.description || "";
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
