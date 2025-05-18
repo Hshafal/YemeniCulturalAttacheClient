@@ -54,7 +54,7 @@ const ActivityList: React.FC = () => {
           key={activity._id}
           id={activity._id}
           title={getTitle(activity)}
-          description={getDescription(activity)}
+          
           imageSrc={getImageURL(activity.thumbnail)}
           imageAlt={getTitle(activity)}
         />
