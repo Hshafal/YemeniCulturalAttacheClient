@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"
 
 const sections = [
-  { id: "ancient-history", title: "التاريخ القديم لليمن" },
+  { id: "ancient-history", title: "تاريخ اليمن" },
   { id: "geography", title: "جغرافية اليمن" },
-  { id: "cuisine", title: "المطبخ اليمني التقليدي" },
+  { id: "cuisine", title: "المطبخ اليمني " },
   { id: "clothing", title: "الملابس اليمنية التقليدية" },
-  { id: "folk-arts", title: "الفنون الشعبية والرقص اليمني" },
-  { id: "music", title: "الموسيقى اليمنية" },
+  { id: "folk-arts", title: "الفنون و الحرف الشعبية" },
+  { id: "music and dance", title: "الموسيقى و الرقص اليمني" },
 ]
 
 interface SectionNavigationProps {
