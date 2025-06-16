@@ -39,7 +39,7 @@ const Registration = () => {
               href="https://docs.google.com/forms/d/e/1FAIpQLSc9c-iA2HmLtJn2ULltBUg8txbPMWhM6_8DKl1eq4kSgAr9Pw/viewform?usp=dialog"
               className="block px-6 py-4 w-full max-w-md bg-white text-red-500 font-semibold rounded-lg shadow-md hover:bg-gray-200 transition duration-300"
             >
-              طالب (على حسابه الخاص، بدون مساعدة مالية من وزارة التعليم العالي اليمني)
+              طالب (بدون مساعدة مالية من وزارة التعليم العالي اليمني)
             </a>
           </div>
         </>
