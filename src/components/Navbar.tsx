@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
       id: 6,
       label: t("navbar.cultural"),
       title: t("navbar.cultural"),
-      path: "/cultural",
+      path: "/cultural-yemen",
       submenu: [
         { label: t("navbar.cultural_sub.yemen"), path: "/cultural-yemen" },
         { label: t("navbar.cultural_sub.russian"), path: "/cultural-russian" },

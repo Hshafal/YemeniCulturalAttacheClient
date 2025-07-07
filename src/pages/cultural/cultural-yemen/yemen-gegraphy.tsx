@@ -13,11 +13,11 @@ export default function GeographyPage() {
         ></div>
         <div className="relative z-20 text-white text-right px-4 sm:px-6 lg:px-8 w-full max-w-6xl mx-auto">
           <Link
-            to="/"
+            to="/cultural-yemen"
             className="inline-flex items-center text-white mb-4 sm:mb-6 hover:text-red-300 transition-colors"
           >
             <ChevronLeft className="ml-2 h-5 w-5" />
-            العودة إلى الصفحة الرئيسية
+            العودة إلى صفحة الثقافة
           </Link>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">جغرافية اليمن</h1>
           <div className="flex flex-wrap gap-2 sm:gap-4">

@@ -189,7 +189,32 @@ const regionalTraditions = [
   },
 ]
 
-
+const instruments = [
+  {
+    id: "qanbus",
+    name: "القنبوس",
+    description: "آلة وترية تشبه العود لكنها أقدم منه وفريدة لليمن",
+    image: "/images/instrument-qanbus.jpg",
+  },
+  {
+    id: "mizmar",
+    name: "المزمار",
+    description: "آلة نفخ شائعة في المناطق الساحلية",
+    image: "/images/instrument-mizmar.jpg",
+  },
+  {
+    id: "drums",
+    name: "الطبول",
+    description: "مجموعة متنوعة من الطبول تستخدم في مختلف الرقصات والاحتفالات",
+    image: "/images/instrument-drums.jpg",
+  },
+  {
+    id: "sahn",
+    name: "الصحن النحاسي",
+    description: "ألواح نحاسية تستخدم كآلات إيقاعية",
+    image: "/images/instrument-sahn.jpg",
+  },
+]
 
 export default function FolkArtsPage() {
   const [selectedDance, setSelectedDance] = useState<DanceItem | null>(null)
@@ -219,19 +244,23 @@ export default function FolkArtsPage() {
         <div className="container mx-auto px-4 h-full flex flex-col justify-end pb-16 relative z-20">
           <Link to="/cultural-yemen" className="inline-flex items-center text-white mb-6 hover:text-red-400 transition-colors">
             <ChevronRight className="ml-1 h-5 w-5" />
-            العودة إلى صفحة الثقافة
+            العودة إلى صحفة الثقافة
           </Link>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 drop-shadow-lg">
-            الحرف والفنون الشعبية 
+            الموسيقى والرقص اليمني
           </h1>
           <div className="flex flex-wrap gap-4 text-white">
             <div className="flex items-center">
               <Music className="ml-2 h-5 w-5 text-red-400" />
-              <span>فنون شعبية </span>
+              <span>موسيقى تقليدية</span>
+            </div>
+            <div className="flex items-center">
+              <Users className="ml-2 h-5 w-5 text-red-400" />
+              <span>رقصات شعبية</span>
             </div>
             <div className="flex items-center">
               <Palette className="ml-2 h-5 w-5 text-red-400" />
-              <span>حرف يدوية</span>
+              <span>أدوات موسيقية</span>
             </div>
           </div>
         </div>
@@ -249,92 +278,70 @@ export default function FolkArtsPage() {
             </p>
             <div className="flex justify-center">
               <div className="inline-flex p-1 bg-red-100 rounded-lg">
-    
                 <button
                   className="text-red-700 hover:text-red-900 hover:bg-red-200 rounded-md px-4 py-2"
-                  onClick={() => document.getElementById("folk-arts")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() => document.getElementById("traditional-dances")?.scrollIntoView({ behavior: "smooth" })}
                 >
-                  الحرف اليدوية
+                  الرقصات التقليدية
                 </button>
                 <button
                   className="text-red-700 hover:text-red-900 hover:bg-red-200 rounded-md px-4 py-2"
-                  onClick={() => document.getElementById("traditions")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() => document.getElementById("music")?.scrollIntoView({ behavior: "smooth" })}
                 >
-                التقاليد الإقليمية
+                  الموسيقى            
                 </button>
                 <button
                   className="text-red-700 hover:text-red-900 hover:bg-red-200 rounded-md px-4 py-2"
                   onClick={() => document.getElementById("musical-instruments")?.scrollIntoView({ behavior: "smooth" })}
                 >
-                  الفنون الشعبية 
-                 </button>
+                  الآلات الموسيقية
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Folk Arts Section */}
-      <section id="folk-arts" className="py-16 bg-gradient-to-b from-red-900 to-blue-900 text-white">
+      {/* Traditional Dances Section */}
+      <section id="traditional-dances" className="py-16 bg-gradient-to-r from-red-50 to-blue-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">الحرف اليدوية والفنون الشعبية</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {folkArts.map((art) => (
-              <div
-                key={art.id}
-                className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden border border-white/20 hover:bg-white/20 transition-colors duration-300 cursor-pointer"
-                onClick={() => setSelectedArt(art)}
-              >
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-2/5 h-48 md:h-auto relative">
-                    <img src={art.image || "/placeholder.svg"} alt={art.title} className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-red-900/60 to-transparent"></div>
-                  </div>
-                  <div className="md:w-3/5 p-6">
-                    <div className="flex items-center text-sm text-red-400 mb-1">
-                      <MapPin className="h-3.5 w-3.5 ml-1" />
-                      <span>{art.region}</span>
-                    </div>
-                    <h3 className="text-xl font-bold mb-3">{art.title}</h3>
-                    <p className="text-white/80 mb-4">{art.description}</p>
-                    <button
-                      className="bg-red-600 hover:bg-red-700 text-white"
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        setSelectedArt(art)
-                      }}
-                    >
-                      عرض التفاصيل
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="flex items-center mb-12">
+            <div className="h-0.5 flex-grow bg-red-200"></div>
+            <h2 className="text-3xl font-bold px-6 text-red-800">الرقصات التقليدية</h2>
+            <div className="h-0.5 flex-grow bg-red-200"></div>
           </div>
-        </div>
-      </section>
-
-      {/* Regional Traditions Section */}
-      <section className="py-16 bg-white" id="traditions">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">التقاليد الإقليمية</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {regionalTraditions.map((region, index) => (
-              <div key={index} className="bg-red-50 rounded-xl overflow-hidden shadow-md">
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-2/5 h-48 md:h-auto relative">
+            {dances.map((dance) => (
+              <div
+                key={dance.id}
+                className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                onClick={() => setSelectedDance(dance)}
+              >
+                <div className="flex flex-col md:flex-row h-full">
+                  <div className="md:w-2/5 h-64 md:h-auto relative overflow-hidden">
                     <img
-                      src={region.image || "/placeholder.svg"}
-                      alt={region.region}
+                      src={dance.image || "/placeholder.svg"}
+                      alt={dance.title}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-red-900/60 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-red-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                      <button className="bg-white text-red-800 hover:bg-red-100">عرض التفاصيل</button>
+                    </div>
                   </div>
-                  <div className="md:w-3/5 p-6">
-                    <h3 className="text-xl font-bold mb-3">{region.region}</h3>
-                    <p className="text-gray-700">{region.description}</p>
+                  <div className="md:w-3/5 p-6 flex flex-col">
+                    <div className="flex items-center text-sm text-red-600 mb-1">
+                      <MapPin className="h-3.5 w-3.5 ml-1" />
+                      <span>{dance.region}</span>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-3">{dance.title}</h3>
+                    <p className="text-gray-700 mb-4 flex-grow">{dance.description}</p>
+                    <div className="flex items-center text-sm text-gray-500">
+                      <span className="bg-red-100 text-red-800 rounded-full px-2 py-0.5">
+                        {dance.details.performers}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -343,45 +350,95 @@ export default function FolkArtsPage() {
         </div>
       </section>
 
-      {/* Cultural Significance Section */}
-      <section className="py-16 bg-gradient-to-r from-red-50 to-blue-50" id="musical-instruments">
+      {/* Musical Instruments Section */}
+      <section id="musical-instruments" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">الأهمية الثقافية للفنون الشعبية</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">الآلات الموسيقية التقليدية</h2>
 
-            <div className="prose prose-lg max-w-none">
-              <p>
-                تلعب الفنون الشعبية والرقص دوراً محورياً في الحفاظ على التراث الثقافي اليمني ونقله عبر الأجيال. فهي ليست
-                مجرد أشكال للترفيه، بل هي وسائل للتعبير عن القيم المجتمعية والهوية الجماعية والتاريخ المشترك.
-              </p>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {instruments.map((instrument) => (
+              <div
+                key={instrument.id}
+                className="bg-red-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 text-center group"
+              >
+                <div className="h-48 overflow-hidden relative">
+                  <img
+                    src={instrument.image || "/placeholder.svg"}
+                    alt={instrument.name}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-xl font-bold mb-2">{instrument.name}</h3>
+                  <p className="text-gray-600">{instrument.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
 
-              <h3>التماسك الاجتماعي</h3>
-              <p>
-                تعزز الرقصات والفنون الشعبية الجماعية الشعور بالانتماء والتماسك الاجتماعي. فالمشاركة في هذه الأنشطة تقوي
-                الروابط بين أفراد المجتمع وتعزز الهوية المشتركة.
-              </p>
-
-              <h3>نقل المعرفة والقيم</h3>
-              <p>
-                تعمل الفنون الشعبية كوسيلة لنقل المعرفة التقليدية والقيم الثقافية من جيل إلى آخر. فالقصص والرموز
-                المتضمنة في الرقصات والحرف اليدوية تحمل دروساً ومعاني عميقة.
-              </p>
-
-              <h3>التنوع الثقافي</h3>
-              <p>
-                يعكس تنوع الفنون الشعبية اليمنية غنى النسيج الثقافي للبلاد. فكل منطقة لها تعبيراتها الفنية المميزة التي
-                تعكس تاريخها وبيئتها وتفاعلاتها مع الثقافات الأخرى.
-              </p>
-
-              <h3>الاستمرارية والتجديد</h3>
-              <p>
-                رغم جذورها العميقة في التاريخ، تستمر الفنون الشعبية اليمنية في التطور والتكيف مع الظروف المتغيرة، مما
-                يضمن استمراريتها وأهميتها للأجيال الجديدة.
-              </p>
+          <div className="mt-12 bg-red-800 text-white rounded-xl p-8">
+            <div className="flex flex-col md:flex-row items-center">
+              <div className="md:w-1/3 mb-6 md:mb-0">
+                <img
+                  src="/images/music-ensemble.jpg"
+                  alt="فرقة موسيقية يمنية تقليدية"
+                  className="rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="md:w-2/3 md:pr-8" id="music">
+                <h3 className="text-2xl font-bold mb-4">الموسيقى اليمنية التقليدية</h3>
+                <p className="mb-4">
+                  تمثل الموسيقى اليمنية أحد أقدم وأغنى التقاليد الموسيقية في شبه الجزيرة العربية، بأساليب متميزة تختلف
+                  عبر مناطق البلاد المختلفة. تم الحفاظ على هذا التراث الموسيقي من خلال التقاليد الشفهية ويستمر في لعب
+                  دور حيوي في الهوية الثقافية اليمنية.
+                </p>
+                <p>
+                  تشمل الأنماط الموسيقية الرئيسية الغناء الصنعاني من منطقة العاصمة، والغناء الحضرمي من منطقة حضرموت،
+                  وأنماط متنوعة من الموسيقى الشعبية في المناطق الساحلية والريفية. تصاحب هذه الموسيقى الرقصات التقليدية
+                  والاحتفالات والمناسبات الاجتماعية في جميع أنحاء اليمن.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+{/* Yemeni Music Audio Showcase */}
+<section className="py-16 bg-gradient-to-r from-yellow-50 to-red-50">
+  <div className="container mx-auto px-4">
+    <div className="max-w-3xl mx-auto text-center mb-10">
+      <h2 className="text-3xl font-bold text-red-800 mb-4">عينة من الموسيقى اليمنية</h2>
+      <p className="text-gray-700 text-lg">
+        استمع إلى مقطع من الغناء الصنعاني التقليدي، أحد أرقى أشكال الموسيقى اليمنية المعروفة بشعرها العميق وأنغامها الرقيقة المصاحبة لآلة القنبوس.
+      </p>
+    </div>
+    <div className="flex flex-col gap-2 w-full">
+    <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-xl p-8 max-w-2xl mx-auto w-full">
+      <h3 className="text-xl font-bold text-red-700 mb-2">مقطوعة من الغناء الصنعاني - بصوت تقليدي</h3>
+      <audio controls className="w-full">
+        <source src="https://audio.com/sypmusic/audio/yorkshire-area-2nd-section-winning-performance-south-yorkshire-police-band" type="audio/mp3" />
+        المتصفح لا يدعم تشغيل الصوت.
+      </audio>
+    </div>
+    <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-xl p-8 max-w-2xl mx-auto w-full">
+      <h3 className="text-xl font-bold text-red-700 mb-2">مقطوعة من الغناء الصنعاني - بصوت تقليدي</h3>
+      <audio controls className="w-full">
+        <source src="/audios/yemeni_sanani_sample.mp3" type="audio/mp3" />
+        المتصفح لا يدعم تشغيل الصوت.
+      </audio>
+    </div>
+    <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-xl p-8 max-w-2xl mx-auto w-full">
+      <h3 className="text-xl font-bold text-red-700 mb-2">مقطوعة من الغناء الصنعاني - بصوت تقليدي</h3>
+      <audio controls className="w-full">
+        <source src="/audios/yemeni_sanani_sample.mp3" type="audio/mp3" />
+        المتصفح لا يدعم تشغيل الصوت.
+      </audio>
+    </div>
+ 
+    </div>
+  </div>
+</section>
+
 
       {/* Dance Detail Modal */}
       {selectedDance && (

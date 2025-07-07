@@ -166,9 +166,9 @@ export default function ClothingPage() {
           style={{ backgroundImage: "url('https://qantara.de/sites/default/files/2024-02/02-traditionelle-mode-im-jemen-foto-dpa.jpg')" }}
         />
         <div className="container mx-auto px-4 h-full flex flex-col justify-end pb-16 relative z-20">
-          <Link to="/" className="inline-flex items-center text-white mb-6 transition">
+          <Link to="/cultural-yemen" className="inline-flex items-center text-white mb-6 transition">
             <ChevronRight className="ml-1 h-5 w-5" />
-            العودة إلى الرئيسية
+            العودة إلى صفحة الثقافة
           </Link>
           <h1 className="text-5xl font-bold text-white mb-4 drop-shadow-lg">الملابس اليمنية التقليدية</h1>
           <div className="flex gap-4 text-white flex-wrap">
